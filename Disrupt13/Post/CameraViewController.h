@@ -11,6 +11,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <QuartzCore/QuartzCore.h>
 #import "CameraHelper.h"
+#import "ListingDetailsViewController.h"
 
 @interface CameraViewController : UIViewController
 

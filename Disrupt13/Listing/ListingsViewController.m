@@ -64,7 +64,7 @@
   [_mapView addAnnotation:annot];
 }
 
-- (void) startCL {
+- (void)startCL {
   // Test for location services
   if (![CLLocationManager locationServicesEnabled]) {
     //    [self doLog:@"User has disabled location services"];

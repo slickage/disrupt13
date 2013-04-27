@@ -89,6 +89,12 @@
   [_session startRunning];
 }
 
+- (void)didReceiveMemoryWarning
+{
+  [super didReceiveMemoryWarning];
+  // Dispose of any resources that can be recreated.
+}
+
 - (IBAction)takePhotoPressed:(id)sender {
   
   AVCaptureConnection *videoConnection = nil;
@@ -109,7 +115,7 @@
     
     _capturedImage = image;
     imageView.image = image;
-//    [self performSegueWithIdentifier:@"UnwindTakePhoto" sender:self];
+    [self performSegueWithIdentifier:@"PushPostDetails" sender:self];
   }];
   
   // Flash the screen white and fade it out to give UI feedback that a still image was taken
@@ -127,10 +133,15 @@
    ];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  if ([segue.identifier isEqualToString:@"PushPostDetails"]) {
+    ListingDetailsViewController *dstVC = segue.destinationViewController;
+    dstVC.listingImage = _capturedImage;
+  }
+}
+
+- (IBAction)cancelPerformed:(id)sender {
+  [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
