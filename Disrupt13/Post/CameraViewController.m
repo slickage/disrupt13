@@ -137,6 +137,7 @@
   if ([segue.identifier isEqualToString:@"PushPostDetails"]) {
     ListingDetailsViewController *dstVC = segue.destinationViewController;
     dstVC.listingImage = _capturedImage;
+    dstVC.userLoc = _userLoc;
   }
 }
 

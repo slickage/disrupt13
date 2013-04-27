@@ -12,6 +12,7 @@
   __weak IBOutlet MKMapView *_mapView;
   
   CLLocationManager *_locManager;
+  CLLocation *_userLoc;
 }
 
 @end
@@ -50,17 +51,17 @@
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *) locations {
-  //  NSLog(@"%@", [locations lastObject]);
+  NSLog(@"%@", [locations lastObject]);
   // got a location, stop getting location updates
   [manager stopUpdatingLocation];
   
-  CLLocation *userLoc = [locations lastObject];
+  _userLoc = [locations lastObject];
   
-  MKCoordinateRegion adjustedRegion = [_mapView regionThatFits:MKCoordinateRegionMakeWithDistance(userLoc.coordinate, 1000, 1000)];
+  MKCoordinateRegion adjustedRegion = [_mapView regionThatFits:MKCoordinateRegionMakeWithDistance(_userLoc.coordinate, 1000, 1000)];
   [_mapView setRegion:adjustedRegion animated:NO];
   
   JPSThumbnailAnnotation *annot = [[JPSThumbnailAnnotation alloc] init];
-  annot.coordinate = userLoc.coordinate;
+  annot.coordinate = _userLoc.coordinate;
   [_mapView addAnnotation:annot];
 }
 
@@ -95,6 +96,14 @@
     _locManager.distanceFilter = 5.0f; // in meters
   }
   [_locManager startUpdatingLocation];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  if ([segue.identifier isEqualToString:@"ShowCameraView"]) {
+    UINavigationController *navController = segue.destinationViewController;
+    CameraViewController *dstVC = (CameraViewController *) [navController topViewController];
+    dstVC.userLoc = _userLoc;
+  }
 }
 
 @end

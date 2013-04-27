@@ -31,6 +31,13 @@
   [super viewDidLoad];
 	// Do any additional setup after loading the view.
   _imageView.image = _listingImage;
+  
+  MKCoordinateRegion adjustedRegion = [_mapView regionThatFits:MKCoordinateRegionMakeWithDistance(_userLoc.coordinate, 1000, 1000)];
+  [_mapView setRegion:adjustedRegion animated:NO];
+  
+  JPSThumbnailAnnotation *annot = [[JPSThumbnailAnnotation alloc] init];
+  annot.coordinate = _userLoc.coordinate;
+  [_mapView addAnnotation:annot];
 }
 
 - (void)didReceiveMemoryWarning {

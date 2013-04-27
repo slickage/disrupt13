@@ -15,4 +15,6 @@
 
 @interface CameraViewController : UIViewController
 
+@property (strong, nonatomic) CLLocation *userLoc;
+
 @end

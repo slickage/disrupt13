@@ -11,6 +11,7 @@
 #import <AddressBook/AddressBook.h>
 #import "JPSThumbnailAnnotationView.h"
 #import "JPSThumbnailAnnotation.h"
+#import "CameraViewController.h"
 
 @interface ListingsViewController : UIViewController<MKMapViewDelegate, UIGestureRecognizerDelegate, UITableViewDataSource, UITableViewDataSource, CLLocationManagerDelegate>
 
