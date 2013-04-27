@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0984A6AF172C4D68007DE898 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0984A6AE172C4D68007DE898 /* Storyboard.storyboard */; };
 		A3B91DA3172C3C8C004ECC6D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B91DA2172C3C8C004ECC6D /* UIKit.framework */; };
 		A3B91DA5172C3C8C004ECC6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B91DA4172C3C8C004ECC6D /* Foundation.framework */; };
 		A3B91DA7172C3C8C004ECC6D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B91DA6172C3C8C004ECC6D /* CoreGraphics.framework */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0984A6AE172C4D68007DE898 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		A3B91D9F172C3C8C004ECC6D /* Disrupt13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Disrupt13.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B91DA2172C3C8C004ECC6D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A3B91DA4172C3C8C004ECC6D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -81,6 +83,7 @@
 				A3B91DB1172C3C8C004ECC6D /* AppDelegate.h */,
 				A3B91DB2172C3C8C004ECC6D /* AppDelegate.m */,
 				A3B91DA9172C3C8C004ECC6D /* Supporting Files */,
+				0984A6AE172C4D68007DE898 /* Storyboard.storyboard */,
 			);
 			path = Disrupt13;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 				A3B91DB5172C3C8C004ECC6D /* Default.png in Resources */,
 				A3B91DB7172C3C8C004ECC6D /* Default@2x.png in Resources */,
 				A3B91DB9172C3C8C004ECC6D /* Default-568h@2x.png in Resources */,
+				0984A6AF172C4D68007DE898 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +252,7 @@
 				GCC_PREFIX_HEADER = "Disrupt13/Disrupt13-Prefix.pch";
 				INFOPLIST_FILE = "Disrupt13/Disrupt13-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -259,6 +264,7 @@
 				GCC_PREFIX_HEADER = "Disrupt13/Disrupt13-Prefix.pch";
 				INFOPLIST_FILE = "Disrupt13/Disrupt13-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -282,6 +288,7 @@
 				A3B91DBE172C3C8C004ECC6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
