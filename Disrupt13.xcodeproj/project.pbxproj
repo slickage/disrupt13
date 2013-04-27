@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0984A6AF172C4D68007DE898 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0984A6AE172C4D68007DE898 /* Storyboard.storyboard */; };
+		0984A6B2172C4DE9007DE898 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0984A6B1172C4DE9007DE898 /* CameraViewController.m */; };
+		0984A6B6172C4FB9007DE898 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0984A6B5172C4FB9007DE898 /* AVFoundation.framework */; };
+		0984A6B8172C4FCF007DE898 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0984A6B7172C4FCF007DE898 /* CoreMedia.framework */; };
+		0984A6BA172C4FD8007DE898 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0984A6B9172C4FD8007DE898 /* ImageIO.framework */; };
+		0984A6BC172C4FE6007DE898 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0984A6BB172C4FE6007DE898 /* CFNetwork.framework */; };
+		0984A6BE172C5005007DE898 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0984A6BD172C5005007DE898 /* AssetsLibrary.framework */; };
+		0984A6C0172C5010007DE898 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0984A6BF172C5010007DE898 /* QuartzCore.framework */; };
 		A3B91DA3172C3C8C004ECC6D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B91DA2172C3C8C004ECC6D /* UIKit.framework */; };
 		A3B91DA5172C3C8C004ECC6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B91DA4172C3C8C004ECC6D /* Foundation.framework */; };
 		A3B91DA7172C3C8C004ECC6D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B91DA6172C3C8C004ECC6D /* CoreGraphics.framework */; };
@@ -31,6 +38,16 @@
 
 /* Begin PBXFileReference section */
 		0984A6AE172C4D68007DE898 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		0984A6B0172C4DE9007DE898 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraViewController.h; path = Post/CameraViewController.h; sourceTree = "<group>"; };
+		0984A6B1172C4DE9007DE898 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraViewController.m; path = Post/CameraViewController.m; sourceTree = "<group>"; };
+		0984A6B3172C4F63007DE898 /* CameraHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CameraHelper.h; path = Post/CameraHelper.h; sourceTree = "<group>"; };
+		0984A6B4172C4F63007DE898 /* CameraHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CameraHelper.m; path = Post/CameraHelper.m; sourceTree = "<group>"; };
+		0984A6B5172C4FB9007DE898 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0984A6B7172C4FCF007DE898 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		0984A6B9172C4FD8007DE898 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		0984A6BB172C4FE6007DE898 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		0984A6BD172C5005007DE898 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		0984A6BF172C5010007DE898 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A3B91D9F172C3C8C004ECC6D /* Disrupt13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Disrupt13.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B91DA2172C3C8C004ECC6D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A3B91DA4172C3C8C004ECC6D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -72,6 +89,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0984A6C0172C5010007DE898 /* QuartzCore.framework in Frameworks */,
+				0984A6BE172C5005007DE898 /* AssetsLibrary.framework in Frameworks */,
+				0984A6BC172C4FE6007DE898 /* CFNetwork.framework in Frameworks */,
+				0984A6BA172C4FD8007DE898 /* ImageIO.framework in Frameworks */,
+				0984A6B8172C4FCF007DE898 /* CoreMedia.framework in Frameworks */,
+				0984A6B6172C4FB9007DE898 /* AVFoundation.framework in Frameworks */,
 				A3B91DA3172C3C8C004ECC6D /* UIKit.framework in Frameworks */,
 				A3B91DA5172C3C8C004ECC6D /* Foundation.framework in Frameworks */,
 				A3B91DA7172C3C8C004ECC6D /* CoreGraphics.framework in Frameworks */,
@@ -84,6 +107,12 @@
 		A3B91D96172C3C8C004ECC6D = {
 			isa = PBXGroup;
 			children = (
+				0984A6BF172C5010007DE898 /* QuartzCore.framework */,
+				0984A6BD172C5005007DE898 /* AssetsLibrary.framework */,
+				0984A6BB172C4FE6007DE898 /* CFNetwork.framework */,
+				0984A6B9172C4FD8007DE898 /* ImageIO.framework */,
+				0984A6B7172C4FCF007DE898 /* CoreMedia.framework */,
+				0984A6B5172C4FB9007DE898 /* AVFoundation.framework */,
 				A3B91DA8172C3C8C004ECC6D /* Disrupt13 */,
 				A3B91DA1172C3C8C004ECC6D /* Frameworks */,
 				A3B91DA0172C3C8C004ECC6D /* Products */,
@@ -117,6 +146,10 @@
 				A3B91DB2172C3C8C004ECC6D /* AppDelegate.m */,
 				A3B91DA9172C3C8C004ECC6D /* Supporting Files */,
 				0984A6AE172C4D68007DE898 /* Storyboard.storyboard */,
+				0984A6B0172C4DE9007DE898 /* CameraViewController.h */,
+				0984A6B1172C4DE9007DE898 /* CameraViewController.m */,
+				0984A6B3172C4F63007DE898 /* CameraHelper.h */,
+				0984A6B4172C4F63007DE898 /* CameraHelper.m */,
 			);
 			path = Disrupt13;
 			sourceTree = "<group>";
@@ -257,6 +290,7 @@
 				A3B91DDC172C50EF004ECC6D /* AFXMLRequestOperation.m in Sources */,
 				A3B91DDD172C50EF004ECC6D /* UIImageView+AFNetworking.m in Sources */,
 				A3B91DE0172C5175004ECC6D /* R3APIClient.m in Sources */,
+				0984A6B2172C4DE9007DE898 /* CameraViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
