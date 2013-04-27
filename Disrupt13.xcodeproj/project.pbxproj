@@ -34,6 +34,7 @@
 		A3B91DDC172C50EF004ECC6D /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B91DD2172C50EF004ECC6D /* AFXMLRequestOperation.m */; };
 		A3B91DDD172C50EF004ECC6D /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B91DD4172C50EF004ECC6D /* UIImageView+AFNetworking.m */; };
 		A3B91DE0172C5175004ECC6D /* R3APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B91DDF172C5175004ECC6D /* R3APIClient.m */; };
+		A3B91DE7172C7202004ECC6D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3B91DE6172C7202004ECC6D /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		A3B91DD4172C50EF004ECC6D /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		A3B91DDE172C5175004ECC6D /* R3APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = R3APIClient.h; path = Remote/R3APIClient.h; sourceTree = "<group>"; };
 		A3B91DDF172C5175004ECC6D /* R3APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = R3APIClient.m; path = Remote/R3APIClient.m; sourceTree = "<group>"; };
+		A3B91DE6172C7202004ECC6D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				A3B91DA8172C3C8C004ECC6D /* Disrupt13 */,
 				A3B91DA1172C3C8C004ECC6D /* Frameworks */,
 				A3B91DA0172C3C8C004ECC6D /* Products */,
+				A3B91DE1172C708C004ECC6D /* Assets */,
 				A3B91DC0172C4FE5004ECC6D /* Vendor */,
 			);
 			sourceTree = "<group>";
@@ -212,6 +215,14 @@
 			path = vendor/AFNetworking/AFNetworking;
 			sourceTree = "<group>";
 		};
+		A3B91DE1172C708C004ECC6D /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A3B91DE6172C7202004ECC6D /* Default-568h@2x.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -268,6 +279,7 @@
 				A3B91DB7172C3C8C004ECC6D /* Default@2x.png in Resources */,
 				A3B91DB9172C3C8C004ECC6D /* Default-568h@2x.png in Resources */,
 				0984A6AF172C4D68007DE898 /* Storyboard.storyboard in Resources */,
+				A3B91DE7172C7202004ECC6D /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
