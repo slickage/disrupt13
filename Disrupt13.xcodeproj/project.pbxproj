@@ -22,6 +22,8 @@
 		0984A6BE172C5005007DE898 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0984A6BD172C5005007DE898 /* AssetsLibrary.framework */; };
 		0984A6C0172C5010007DE898 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0984A6BF172C5010007DE898 /* QuartzCore.framework */; };
 		09F74E8F172C809C00DE249C /* ListingDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F74E8E172C809C00DE249C /* ListingDetailsViewController.m */; };
+		09F74E93172C89E600DE249C /* Cuprum-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09F74E91172C89E600DE249C /* Cuprum-Bold.ttf */; };
+		09F74E94172C89E600DE249C /* Cuprum-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09F74E92172C89E600DE249C /* Cuprum-Regular.ttf */; };
 		A3B91DA3172C3C8C004ECC6D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B91DA2172C3C8C004ECC6D /* UIKit.framework */; };
 		A3B91DA5172C3C8C004ECC6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B91DA4172C3C8C004ECC6D /* Foundation.framework */; };
 		A3B91DA7172C3C8C004ECC6D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B91DA6172C3C8C004ECC6D /* CoreGraphics.framework */; };
@@ -68,6 +70,8 @@
 		0984A6BF172C5010007DE898 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		09F74E8D172C809C00DE249C /* ListingDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListingDetailsViewController.h; path = Post/ListingDetailsViewController.h; sourceTree = "<group>"; };
 		09F74E8E172C809C00DE249C /* ListingDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListingDetailsViewController.m; path = Post/ListingDetailsViewController.m; sourceTree = "<group>"; };
+		09F74E91172C89E600DE249C /* Cuprum-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cuprum-Bold.ttf"; sourceTree = "<group>"; };
+		09F74E92172C89E600DE249C /* Cuprum-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cuprum-Regular.ttf"; sourceTree = "<group>"; };
 		A3B91D9F172C3C8C004ECC6D /* Disrupt13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Disrupt13.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B91DA2172C3C8C004ECC6D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A3B91DA4172C3C8C004ECC6D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -140,6 +144,15 @@
 			name = JPSThumbnailAnnotation;
 			path = vendor/JPSThumbnailAnnotation;
 			sourceTree = SOURCE_ROOT;
+		};
+		09F74E90172C89E600DE249C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				09F74E91172C89E600DE249C /* Cuprum-Bold.ttf */,
+				09F74E92172C89E600DE249C /* Cuprum-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
 		};
 		A3B91D96172C3C8C004ECC6D = {
 			isa = PBXGroup;
@@ -261,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				A3B91DE6172C7202004ECC6D /* Default-568h@2x.png */,
+				09F74E90172C89E600DE249C /* Fonts */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -322,6 +336,8 @@
 				A3B91DB9172C3C8C004ECC6D /* Default-568h@2x.png in Resources */,
 				0984A6AF172C4D68007DE898 /* Storyboard.storyboard in Resources */,
 				A3B91DE7172C7202004ECC6D /* Default-568h@2x.png in Resources */,
+				09F74E93172C89E600DE249C /* Cuprum-Bold.ttf in Resources */,
+				09F74E94172C89E600DE249C /* Cuprum-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
