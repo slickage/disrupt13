@@ -59,37 +59,9 @@
   MKCoordinateRegion adjustedRegion = [_mapView regionThatFits:MKCoordinateRegionMakeWithDistance(userLoc.coordinate, 1000, 1000)];
   [_mapView setRegion:adjustedRegion animated:NO];
   
-//  CLLocationDistance shortestDistance;
-//  NSString *locName;
-  
-//  for (id key in jsonData) {
-//    NSDictionary *locData = [jsonData objectForKey:key];
-//    NSDictionary *location = [locData objectForKey:@"location"];
-//    double lat = [[location objectForKey:@"lat"] doubleValue];
-//    double lon = [[location objectForKey:@"lon"] doubleValue];
-//    
-//    CLLocation *stopLoc = [[CLLocation alloc] initWithLatitude:lat longitude:lon];
-//    
-//    CLLocationDistance distanceMeters = [userLoc distanceFromLocation:stopLoc];
-//    //    NSLog(@"%f", distanceMeters);
-//    //    NSLog(@"%@", key);
-//    
-//    if (!locName) {
-//      shortestDistance = distanceMeters;
-//      locName = key;
-//    }
-//    else {
-//      if (distanceMeters < shortestDistance) {
-//        shortestDistance = distanceMeters;
-//        locName = key;
-//      }
-//    }
-//  }
-  
-//  if (locName) {
-//    selectedLocName = locName;
-//    [self performSegueWithIdentifier:@"PushTrolleyInfoDetail" sender:self];
-//  }
+  JPSThumbnailAnnotation *annot = [[JPSThumbnailAnnotation alloc] init];
+  annot.coordinate = userLoc.coordinate;
+  [_mapView addAnnotation:annot];
 }
 
 - (void) startCL {
