@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0971E9A8172C5B5B000F1672 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0971E9A7172C5B5B000F1672 /* MapKit.framework */; };
 		0984A6AF172C4D68007DE898 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0984A6AE172C4D68007DE898 /* Storyboard.storyboard */; };
 		0984A6B2172C4DE9007DE898 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0984A6B1172C4DE9007DE898 /* CameraViewController.m */; };
 		0984A6B6172C4FB9007DE898 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0984A6B5172C4FB9007DE898 /* AVFoundation.framework */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0971E9A7172C5B5B000F1672 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0984A6AE172C4D68007DE898 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		0984A6B0172C4DE9007DE898 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraViewController.h; path = Post/CameraViewController.h; sourceTree = "<group>"; };
 		0984A6B1172C4DE9007DE898 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraViewController.m; path = Post/CameraViewController.m; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0971E9A8172C5B5B000F1672 /* MapKit.framework in Frameworks */,
 				0984A6C0172C5010007DE898 /* QuartzCore.framework in Frameworks */,
 				0984A6BE172C5005007DE898 /* AssetsLibrary.framework in Frameworks */,
 				0984A6BC172C4FE6007DE898 /* CFNetwork.framework in Frameworks */,
@@ -109,6 +112,7 @@
 		A3B91D96172C3C8C004ECC6D = {
 			isa = PBXGroup;
 			children = (
+				0971E9A7172C5B5B000F1672 /* MapKit.framework */,
 				0984A6BF172C5010007DE898 /* QuartzCore.framework */,
 				0984A6BD172C5005007DE898 /* AssetsLibrary.framework */,
 				0984A6BB172C4FE6007DE898 /* CFNetwork.framework */,
