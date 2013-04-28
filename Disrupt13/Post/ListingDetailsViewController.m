@@ -20,11 +20,11 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+  self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+  if (self) {
+    // Custom initialization
+  }
+  return self;
 }
 
 - (void)viewDidLoad {
@@ -46,7 +46,30 @@
 }
 
 - (IBAction)recyclePerformed:(id)sender {
-  [self dismissViewControllerAnimated:YES completion:nil];
+  UIImage *resizedImage = [_imageView.image imageByScalingAndCroppingForSize:CGSizeMake(320,320)];
+  NSData *imageData = UIImagePNGRepresentation(resizedImage);
+  
+  NSDictionary *parameters = @{ @"item[heading]" : @"item-heading",
+                                @"item[description]" : @"item-desc",
+                                @"item[latlon][latitude]" : @1,
+                                @"item[latlon][latitude]" : @2,
+                                };
+  
+  R3APIClient *apiClient = [R3APIClient sharedClient];
+  NSMutableURLRequest *request = [apiClient multipartFormRequestWithMethod:@"POST" path:@"/items" parameters:parameters constructingBodyWithBlock: ^(id <AFMultipartFormData>formData) {
+    [formData appendPartWithFileData:imageData name:@"item[photo]" fileName:@"photo.jpg" mimeType:@"image/png"];
+  }];
+  
+  AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+  [operation setUploadProgressBlock:^(NSUInteger bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite) {
+    NSLog(@"%@", [NSString stringWithFormat:@"Sent %lld of %lld bytes", totalBytesWritten, totalBytesExpectedToWrite]);
+  }];
+  [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [self dismissViewControllerAnimated:YES completion:nil];
+  } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    [self dismissViewControllerAnimated:YES completion:nil];
+  }];
+  [apiClient enqueueHTTPRequestOperation:operation];
 }
 
 @end

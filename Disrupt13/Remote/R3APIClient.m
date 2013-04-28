@@ -1,6 +1,6 @@
 #import "R3APIClient.h"
 
-static NSString * const kAPIBaseURLString = @"http://localhost:3000/";
+static NSString * const kAPIBaseURLString = @"http://10.11.6.154:3000/";
 
 @implementation R3APIClient
 
@@ -38,24 +38,5 @@ static NSString * const kAPIBaseURLString = @"http://localhost:3000/";
     [cookieStorage setCookie: cookie];
   }
 }
-
-
-//UIImage *resizedImage = [_capturedImage imageByScalingAndCroppingForSize:CGSizeMake(320,320)];
-//NSData *imageData = UIImageJPEGRepresentation(resizedImage, 0.5);
-//
-//NSDictionary *parameters = @{ @"post[likes]" : @0,
-//                              @"post[dislikes]" : @0,
-//                              @"post[dare_id]" : [_selectedDare objectForKey:@"id"] };
-//
-//NSMutableURLRequest *request = [apiClient multipartFormRequestWithMethod:@"POST" path:@"/posts" parameters:parameters constructingBodyWithBlock: ^(id <AFMultipartFormData>formData) {
-//  [formData appendPartWithFileData:imageData name:@"post[photo]" fileName:@"photo.jpg" mimeType:@"image/jpeg"];
-//}];
-//
-//AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
-//[operation setUploadProgressBlock:^(NSUInteger bytesWritten, long long totalBytesWritten, long long totalBytesExpectedToWrite) {
-//  NSLog(@"%@", [NSString stringWithFormat:@"Sent %lld of %lld bytes", totalBytesWritten, totalBytesExpectedToWrite]);
-//}];
-//[apiClient enqueueHTTPRequestOperation:operation];
-
 
 @end

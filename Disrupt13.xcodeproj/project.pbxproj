@@ -33,6 +33,7 @@
 		09F74EA3172CA58D00DE249C /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 09F74EA2172CA58D00DE249C /* libsqlite3.dylib */; };
 		09F74EA7172CA84D00DE249C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09F74EA6172CA84D00DE249C /* Security.framework */; };
 		09F74EA9172CB79200DE249C /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09F74EA8172CB79200DE249C /* FacebookSDK.framework */; };
+		A379B506172CC2E5007CB106 /* UIImage+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = A379B505172CC2E5007CB106 /* UIImage+Extras.m */; };
 		A3B91DA3172C3C8C004ECC6D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B91DA2172C3C8C004ECC6D /* UIKit.framework */; };
 		A3B91DA5172C3C8C004ECC6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B91DA4172C3C8C004ECC6D /* Foundation.framework */; };
 		A3B91DA7172C3C8C004ECC6D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B91DA6172C3C8C004ECC6D /* CoreGraphics.framework */; };
@@ -91,6 +92,8 @@
 		09F74EA2172CA58D00DE249C /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		09F74EA6172CA84D00DE249C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		09F74EA8172CB79200DE249C /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = vendor/FacebookSDK.framework; sourceTree = "<group>"; };
+		A379B504172CC2E5007CB106 /* UIImage+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extras.h"; sourceTree = "<group>"; };
+		A379B505172CC2E5007CB106 /* UIImage+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extras.m"; sourceTree = "<group>"; };
 		A3B91D9F172C3C8C004ECC6D /* Disrupt13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Disrupt13.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B91DA2172C3C8C004ECC6D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A3B91DA4172C3C8C004ECC6D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -179,6 +182,16 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		A379B503172CC2E5007CB106 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				A379B504172CC2E5007CB106 /* UIImage+Extras.h */,
+				A379B505172CC2E5007CB106 /* UIImage+Extras.m */,
+			);
+			name = Helper;
+			path = Disrupt13/Helper;
+			sourceTree = "<group>";
+		};
 		A3B91D96172C3C8C004ECC6D = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +213,7 @@
 				A3B91DA0172C3C8C004ECC6D /* Products */,
 				A3B91DE1172C708C004ECC6D /* Assets */,
 				A3B91DC0172C4FE5004ECC6D /* Vendor */,
+				A379B503172CC2E5007CB106 /* Helper */,
 			);
 			sourceTree = "<group>";
 		};
@@ -404,6 +418,7 @@
 				0971E9B7172C7299000F1672 /* JPSThumnail.m in Sources */,
 				09F74E8F172C809C00DE249C /* ListingDetailsViewController.m in Sources */,
 				09F74E97172CA02600DE249C /* LoginViewController.m in Sources */,
+				A379B506172CC2E5007CB106 /* UIImage+Extras.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
