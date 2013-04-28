@@ -161,7 +161,7 @@
             </objects>
             <point key="canvasLocation" x="-214" y="-495"/>
         </scene>
-        <!--Listings View Controller - Listings-->
+        <!--Listings View Controller - Reuse.io-->
         <scene sceneID="JUV-zU-np5">
             <objects>
                 <viewController id="bTd-kr-SPZ" customClass="ListingsViewController" sceneMemberID="viewController">
@@ -203,7 +203,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="vmb-ZU-sbG"/>
-                    <navigationItem key="navigationItem" title="Listings" id="6oV-da-sls">
+                    <navigationItem key="navigationItem" title="Reuse.io" id="6oV-da-sls">
                         <barButtonItem key="rightBarButtonItem" title="Post" id="z4E-wu-lox">
                             <connections>
                                 <segue destination="IAY-QT-tP1" kind="modal" identifier="ShowCameraView" id="B13-f5-FBC"/>
@@ -295,6 +295,8 @@
         <class className="CameraViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CameraViewController.h"/>
             <relationships>
+                <relationship kind="action" name="cancelPerformed:"/>
+                <relationship kind="action" name="takePhotoPressed:"/>
                 <relationship kind="outlet" name="_cameraPreviewView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="_takePhotoButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>

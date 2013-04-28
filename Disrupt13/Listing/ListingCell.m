@@ -26,6 +26,11 @@
     // Configure the view for the selected state
 }
 
+- (void)awakeFromNib {
+  UIFont *font = [UIFont fontWithName:@"Cuprum-Regular" size:18];
+  [_label setFont:font];
+}
+
 - (void)prepareForReuse {
   _imageVIew.image = nil;
   _label.text = nil;
