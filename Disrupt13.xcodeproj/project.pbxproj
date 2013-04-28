@@ -59,6 +59,7 @@
 		A379B524172CFF34007CB106 /* GlympseResourcesLite.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A379B522172CFF34007CB106 /* GlympseResourcesLite.bundle */; };
 		A379B527172D075B007CB106 /* nav_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = A379B525172D075B007CB106 /* nav_logo.png */; };
 		A379B528172D075B007CB106 /* nav_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A379B526172D075B007CB106 /* nav_logo@2x.png */; };
+		A379B52B172D1A13007CB106 /* RaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A379B52A172D1A13007CB106 /* RaceViewController.m */; };
 		A3B91DA3172C3C8C004ECC6D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B91DA2172C3C8C004ECC6D /* UIKit.framework */; };
 		A3B91DA5172C3C8C004ECC6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B91DA4172C3C8C004ECC6D /* Foundation.framework */; };
 		A3B91DA7172C3C8C004ECC6D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B91DA6172C3C8C004ECC6D /* CoreGraphics.framework */; };
@@ -147,6 +148,8 @@
 		A379B522172CFF34007CB106 /* GlympseResourcesLite.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GlympseResourcesLite.bundle; sourceTree = "<group>"; };
 		A379B525172D075B007CB106 /* nav_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_logo.png; sourceTree = "<group>"; };
 		A379B526172D075B007CB106 /* nav_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_logo@2x.png"; sourceTree = "<group>"; };
+		A379B529172D1A13007CB106 /* RaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RaceViewController.h; sourceTree = "<group>"; };
+		A379B52A172D1A13007CB106 /* RaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RaceViewController.m; sourceTree = "<group>"; };
 		A3B91D9F172C3C8C004ECC6D /* Disrupt13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Disrupt13.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B91DA2172C3C8C004ECC6D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A3B91DA4172C3C8C004ECC6D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -344,6 +347,8 @@
 				0926AB49172CF55C00EEC0EC /* ListingCell.m */,
 				0933CA89172D0C26008EA02A /* LabelHelper.h */,
 				0933CA8A172D0C26008EA02A /* LabelHelper.m */,
+				A379B529172D1A13007CB106 /* RaceViewController.h */,
+				A379B52A172D1A13007CB106 /* RaceViewController.m */,
 			);
 			path = Disrupt13;
 			sourceTree = "<group>";
@@ -540,6 +545,7 @@
 				09006B67172CE2FA00868B29 /* MapAnnotation.m in Sources */,
 				0926AB4A172CF55C00EEC0EC /* ListingCell.m in Sources */,
 				0933CA8B172D0C26008EA02A /* LabelHelper.m in Sources */,
+				A379B52B172D1A13007CB106 /* RaceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

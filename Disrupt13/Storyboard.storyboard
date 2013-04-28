@@ -264,11 +264,45 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="deN-Sh-HZs"/>
+                    <navigationItem key="navigationItem" id="deN-Sh-HZs">
+                        <barButtonItem key="rightBarButtonItem" title="View Race" id="A9Q-4y-9cZ">
+                            <connections>
+                                <segue destination="EWr-iU-gG5" kind="push" id="stE-An-rhE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bha-Ds-hlL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="585" y="-495"/>
+        </scene>
+        <!--Race View Controller-->
+        <scene sceneID="fTi-FZ-OjP">
+            <objects>
+                <viewController id="EWr-iU-gG5" customClass="RaceViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jLT-5u-SjT">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="Gb4-vt-0nx">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="EWr-iU-gG5" id="QJO-57-Ltr"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BET-Zs-xmc"/>
+                    <connections>
+                        <outlet property="webView" destination="Gb4-vt-0nx" id="qMo-sT-Nc3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bvB-9V-LYn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="-489"/>
         </scene>
     </scenes>
     <resources>
@@ -280,6 +314,8 @@
         <class className="CameraViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CameraViewController.h"/>
             <relationships>
+                <relationship kind="action" name="cancelPerformed:"/>
+                <relationship kind="action" name="takePhotoPressed:"/>
                 <relationship kind="outlet" name="_cameraPreviewView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="_takePhotoButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
@@ -316,6 +352,12 @@
         </class>
         <class className="LoginViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
+        </class>
+        <class className="RaceViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RaceViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
