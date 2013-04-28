@@ -177,6 +177,20 @@
                                 <rect key="frame" x="0.0" y="213" width="320" height="291"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Ljk-qy-m3F">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <segue destination="WG4-ur-Bff" kind="push" id="XDg-DM-e3t"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -198,6 +212,42 @@
             </objects>
             <point key="canvasLocation" x="224" y="-495"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="zZ8-aN-Of7">
+            <objects>
+                <viewController id="WG4-ur-Bff" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XzP-Bx-KA7">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="xKr-Kf-IJ0">
+                                <rect key="frame" x="20" y="20" width="275" height="275"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Come and get it!" id="NIf-7X-uoz">
+                                <rect key="frame" x="20" y="307" width="275" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" id="tOI-a4-FGM">
+                                <rect key="frame" x="15" y="393" width="285" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="I'm Interested"/>
+                                    <segment title="On my way!"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="deN-Sh-HZs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bha-Ds-hlL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="585" y="-495"/>
+        </scene>
     </scenes>
     <classes>
         <class className="CameraViewController" superclassName="UIViewController">
@@ -213,6 +263,7 @@
         <class className="ListingDetailsViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ListingDetailsViewController.h"/>
             <relationships>
+                <relationship kind="action" name="recyclePerformed:"/>
                 <relationship kind="outlet" name="_imageView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="_mapView" candidateClass="MKMapView"/>
                 <relationship kind="outlet" name="_textView" candidateClass="UITextView"/>
