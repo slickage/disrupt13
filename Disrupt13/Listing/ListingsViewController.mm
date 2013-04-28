@@ -142,6 +142,12 @@
     CameraViewController *dstVC = (CameraViewController *) [navController topViewController];
     dstVC.userLoc = _userLoc;
   }
+  else if ([segue.identifier isEqualToString:@"PushDetailsView"]) {
+    IntentsViewController *dstVC = segue.destinationViewController;
+    
+    NSIndexPath *selection = [_listingsTableView indexPathForSelectedRow];
+    dstVC.itemData = [_items objectAtIndex:selection.row];
+  }
 }
 
 
@@ -164,6 +170,7 @@
     NSDictionary *item = [_items objectAtIndex:indexPath.row];
     label = [item objectForKey:@"description"];
     [cell.label setText:label];
+    [cell.imageVIew setImageWithURL:[NSURL URLWithString:[item objectForKey:@"photo_url"]] placeholderImage:nil];
 //    NSLog(@"%d row : %@", indexPath.row, label);
   }
   return cell;

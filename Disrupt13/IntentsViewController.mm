@@ -8,7 +8,11 @@
 
 #import "IntentsViewController.h"
 
-@interface IntentsViewController ()
+@interface IntentsViewController () {
+  
+  __weak IBOutlet UIImageView *_imageView;
+  __weak IBOutlet UITextView *_textView;
+}
 
 @end
 
@@ -41,8 +45,11 @@
   
   _glympse->setActive(true);
   
+
   // Create ticket object.
   
+  [_imageView setImageWithURL:[NSURL URLWithString:[_itemData objectForKey:@"photo_url"]] placeholderImage:nil];
+  _textView.text = [_itemData objectForKey:@"description"];
 }
 
 - (void)didReceiveMemoryWarning

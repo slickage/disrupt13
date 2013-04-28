@@ -23,8 +23,9 @@
 		0933CA90172D0F6A008EA02A /* snap_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0933CA8E172D0F6A008EA02A /* snap_photo.png */; };
 		0933CA91172D0F6A008EA02A /* snap_photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0933CA8F172D0F6A008EA02A /* snap_photo@2x.png */; };
 		0933CA93172D1367008EA02A /* Tim-Cook.png in Resources */ = {isa = PBXBuildFile; fileRef = 0933CA92172D1367008EA02A /* Tim-Cook.png */; };
+		0933CA95172D2212008EA02A /* bill-gates.png in Resources */ = {isa = PBXBuildFile; fileRef = 0933CA94172D2212008EA02A /* bill-gates.png */; };
 		0971E9A8172C5B5B000F1672 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0971E9A7172C5B5B000F1672 /* MapKit.framework */; };
-		0971E9AB172C6107000F1672 /* ListingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0971E9AA172C6107000F1672 /* ListingsViewController.m */; };
+		0971E9AB172C6107000F1672 /* ListingsViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0971E9AA172C6107000F1672 /* ListingsViewController.mm */; };
 		0971E9AD172C6F3E000F1672 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0971E9AC172C6F3D000F1672 /* CoreLocation.framework */; };
 		0971E9B5172C7299000F1672 /* JPSThumbnailAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0971E9B1172C7299000F1672 /* JPSThumbnailAnnotation.m */; };
 		0971E9B6172C7299000F1672 /* JPSThumbnailAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0971E9B3172C7299000F1672 /* JPSThumbnailAnnotationView.m */; };
@@ -101,9 +102,10 @@
 		0933CA8E172D0F6A008EA02A /* snap_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snap_photo.png; sourceTree = "<group>"; };
 		0933CA8F172D0F6A008EA02A /* snap_photo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snap_photo@2x.png"; sourceTree = "<group>"; };
 		0933CA92172D1367008EA02A /* Tim-Cook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tim-Cook.png"; sourceTree = "<group>"; };
+		0933CA94172D2212008EA02A /* bill-gates.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bill-gates.png"; sourceTree = "<group>"; };
 		0971E9A7172C5B5B000F1672 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0971E9A9172C6107000F1672 /* ListingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListingsViewController.h; path = Listing/ListingsViewController.h; sourceTree = "<group>"; };
-		0971E9AA172C6107000F1672 /* ListingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListingsViewController.m; path = Listing/ListingsViewController.m; sourceTree = "<group>"; };
+		0971E9AA172C6107000F1672 /* ListingsViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ListingsViewController.mm; path = Listing/ListingsViewController.mm; sourceTree = "<group>"; };
 		0971E9AC172C6F3D000F1672 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		0971E9AF172C7299000F1672 /* JPSThumbnail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPSThumbnail.h; sourceTree = "<group>"; };
 		0971E9B0172C7299000F1672 /* JPSThumbnailAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPSThumbnailAnnotation.h; sourceTree = "<group>"; };
@@ -333,7 +335,7 @@
 				0984A6B3172C4F63007DE898 /* CameraHelper.h */,
 				0984A6B4172C4F63007DE898 /* CameraHelper.m */,
 				0971E9A9172C6107000F1672 /* ListingsViewController.h */,
-				0971E9AA172C6107000F1672 /* ListingsViewController.m */,
+				0971E9AA172C6107000F1672 /* ListingsViewController.mm */,
 				09F74E8D172C809C00DE249C /* ListingDetailsViewController.h */,
 				09F74E8E172C809C00DE249C /* ListingDetailsViewController.m */,
 				09F74E95172CA02600DE249C /* LoginViewController.h */,
@@ -416,6 +418,7 @@
 		A3B91DE1172C708C004ECC6D /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				0933CA94172D2212008EA02A /* bill-gates.png */,
 				0933CA92172D1367008EA02A /* Tim-Cook.png */,
 				0933CA8E172D0F6A008EA02A /* snap_photo.png */,
 				0933CA8F172D0F6A008EA02A /* snap_photo@2x.png */,
@@ -511,6 +514,7 @@
 				0933CA90172D0F6A008EA02A /* snap_photo.png in Resources */,
 				0933CA91172D0F6A008EA02A /* snap_photo@2x.png in Resources */,
 				0933CA93172D1367008EA02A /* Tim-Cook.png in Resources */,
+				0933CA95172D2212008EA02A /* bill-gates.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,7 +538,7 @@
 				A3B91DDD172C50EF004ECC6D /* UIImageView+AFNetworking.m in Sources */,
 				A3B91DE0172C5175004ECC6D /* R3APIClient.m in Sources */,
 				0984A6B2172C4DE9007DE898 /* CameraViewController.m in Sources */,
-				0971E9AB172C6107000F1672 /* ListingsViewController.m in Sources */,
+				0971E9AB172C6107000F1672 /* ListingsViewController.mm in Sources */,
 				0971E9B5172C7299000F1672 /* JPSThumbnailAnnotation.m in Sources */,
 				0971E9B6172C7299000F1672 /* JPSThumbnailAnnotationView.m in Sources */,
 				0971E9B7172C7299000F1672 /* JPSThumnail.m in Sources */,
