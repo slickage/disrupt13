@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		09006B63172CC8FF00868B29 /* GlympseKitLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09006B60172CC8FF00868B29 /* GlympseKitLite.framework */; };
-		09006B64172CC8FF00868B29 /* GlympseResourcesLite.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 09006B62172CC8FF00868B29 /* GlympseResourcesLite.bundle */; };
 		0971E9A8172C5B5B000F1672 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0971E9A7172C5B5B000F1672 /* MapKit.framework */; };
 		0971E9AB172C6107000F1672 /* ListingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0971E9AA172C6107000F1672 /* ListingsViewController.m */; };
 		0971E9AD172C6F3E000F1672 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0971E9AC172C6F3D000F1672 /* CoreLocation.framework */; };
@@ -36,12 +35,19 @@
 		09F74EA7172CA84D00DE249C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09F74EA6172CA84D00DE249C /* Security.framework */; };
 		09F74EA9172CB79200DE249C /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09F74EA8172CB79200DE249C /* FacebookSDK.framework */; };
 		A379B506172CC2E5007CB106 /* UIImage+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = A379B505172CC2E5007CB106 /* UIImage+Extras.m */; };
+		A379B508172CD219007CB106 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A379B507172CD219007CB106 /* libz.dylib */; };
+		A379B50A172CD22C007CB106 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A379B509172CD22C007CB106 /* AddressBook.framework */; };
+		A379B50C172CD245007CB106 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A379B50B172CD245007CB106 /* EventKit.framework */; };
+		A379B50E172CD25A007CB106 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A379B50D172CD25A007CB106 /* MessageUI.framework */; };
+		A379B511172CD73B007CB106 /* IntentsViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = A379B510172CD73B007CB106 /* IntentsViewController.mm */; };
+		A379B515172CD98F007CB106 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A379B514172CD98F007CB106 /* libstdc++.dylib */; };
+		A379B518172CE1AE007CB106 /* GlympseResourcesLite.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A379B517172CE1AE007CB106 /* GlympseResourcesLite.bundle */; };
 		A3B91DA3172C3C8C004ECC6D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B91DA2172C3C8C004ECC6D /* UIKit.framework */; };
 		A3B91DA5172C3C8C004ECC6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B91DA4172C3C8C004ECC6D /* Foundation.framework */; };
 		A3B91DA7172C3C8C004ECC6D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B91DA6172C3C8C004ECC6D /* CoreGraphics.framework */; };
 		A3B91DAD172C3C8C004ECC6D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3B91DAB172C3C8C004ECC6D /* InfoPlist.strings */; };
 		A3B91DAF172C3C8C004ECC6D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B91DAE172C3C8C004ECC6D /* main.m */; };
-		A3B91DB3172C3C8C004ECC6D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B91DB2172C3C8C004ECC6D /* AppDelegate.m */; };
+		A3B91DB3172C3C8C004ECC6D /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = A3B91DB2172C3C8C004ECC6D /* AppDelegate.mm */; };
 		A3B91DB5172C3C8C004ECC6D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A3B91DB4172C3C8C004ECC6D /* Default.png */; };
 		A3B91DB7172C3C8C004ECC6D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3B91DB6172C3C8C004ECC6D /* Default@2x.png */; };
 		A3B91DB9172C3C8C004ECC6D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3B91DB8172C3C8C004ECC6D /* Default-568h@2x.png */; };
@@ -60,7 +66,6 @@
 
 /* Begin PBXFileReference section */
 		09006B60172CC8FF00868B29 /* GlympseKitLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GlympseKitLite.framework; sourceTree = "<group>"; };
-		09006B62172CC8FF00868B29 /* GlympseResourcesLite.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GlympseResourcesLite.bundle; sourceTree = "<group>"; };
 		0971E9A7172C5B5B000F1672 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0971E9A9172C6107000F1672 /* ListingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListingsViewController.h; path = Listing/ListingsViewController.h; sourceTree = "<group>"; };
 		0971E9AA172C6107000F1672 /* ListingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListingsViewController.m; path = Listing/ListingsViewController.m; sourceTree = "<group>"; };
@@ -98,6 +103,15 @@
 		09F74EA8172CB79200DE249C /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = vendor/FacebookSDK.framework; sourceTree = "<group>"; };
 		A379B504172CC2E5007CB106 /* UIImage+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extras.h"; sourceTree = "<group>"; };
 		A379B505172CC2E5007CB106 /* UIImage+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extras.m"; sourceTree = "<group>"; };
+		A379B507172CD219007CB106 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		A379B509172CD22C007CB106 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		A379B50B172CD245007CB106 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		A379B50D172CD25A007CB106 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		A379B50F172CD73B007CB106 /* IntentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntentsViewController.h; sourceTree = "<group>"; };
+		A379B510172CD73B007CB106 /* IntentsViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IntentsViewController.mm; sourceTree = "<group>"; };
+		A379B512172CD96B007CB106 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		A379B514172CD98F007CB106 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		A379B517172CE1AE007CB106 /* GlympseResourcesLite.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GlympseResourcesLite.bundle; sourceTree = "<group>"; };
 		A3B91D9F172C3C8C004ECC6D /* Disrupt13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Disrupt13.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B91DA2172C3C8C004ECC6D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A3B91DA4172C3C8C004ECC6D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -107,7 +121,7 @@
 		A3B91DAE172C3C8C004ECC6D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A3B91DB0172C3C8C004ECC6D /* Disrupt13-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Disrupt13-Prefix.pch"; sourceTree = "<group>"; };
 		A3B91DB1172C3C8C004ECC6D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		A3B91DB2172C3C8C004ECC6D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A3B91DB2172C3C8C004ECC6D /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		A3B91DB4172C3C8C004ECC6D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		A3B91DB6172C3C8C004ECC6D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A3B91DB8172C3C8C004ECC6D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -140,6 +154,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A379B515172CD98F007CB106 /* libstdc++.dylib in Frameworks */,
+				A379B50E172CD25A007CB106 /* MessageUI.framework in Frameworks */,
+				A379B50C172CD245007CB106 /* EventKit.framework in Frameworks */,
+				A379B50A172CD22C007CB106 /* AddressBook.framework in Frameworks */,
+				A379B508172CD219007CB106 /* libz.dylib in Frameworks */,
 				09F74EA7172CA84D00DE249C /* Security.framework in Frameworks */,
 				09F74EA3172CA58D00DE249C /* libsqlite3.dylib in Frameworks */,
 				09F74EA1172CA56500DE249C /* Accounts.framework in Frameworks */,
@@ -177,7 +196,7 @@
 		09006B61172CC8FF00868B29 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				09006B62172CC8FF00868B29 /* GlympseResourcesLite.bundle */,
+				A379B517172CE1AE007CB106 /* GlympseResourcesLite.bundle */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -218,6 +237,12 @@
 		A3B91D96172C3C8C004ECC6D = {
 			isa = PBXGroup;
 			children = (
+				A379B514172CD98F007CB106 /* libstdc++.dylib */,
+				A379B512172CD96B007CB106 /* libc++.dylib */,
+				A379B50D172CD25A007CB106 /* MessageUI.framework */,
+				A379B50B172CD245007CB106 /* EventKit.framework */,
+				A379B509172CD22C007CB106 /* AddressBook.framework */,
+				A379B507172CD219007CB106 /* libz.dylib */,
 				09F74EA6172CA84D00DE249C /* Security.framework */,
 				09F74EA2172CA58D00DE249C /* libsqlite3.dylib */,
 				09F74EA0172CA56500DE249C /* Accounts.framework */,
@@ -266,7 +291,7 @@
 			children = (
 				A3B91DBF172C4F69004ECC6D /* Remote */,
 				A3B91DB1172C3C8C004ECC6D /* AppDelegate.h */,
-				A3B91DB2172C3C8C004ECC6D /* AppDelegate.m */,
+				A3B91DB2172C3C8C004ECC6D /* AppDelegate.mm */,
 				A3B91DA9172C3C8C004ECC6D /* Supporting Files */,
 				0984A6AE172C4D68007DE898 /* Storyboard.storyboard */,
 				0984A6B0172C4DE9007DE898 /* CameraViewController.h */,
@@ -279,6 +304,8 @@
 				09F74E8E172C809C00DE249C /* ListingDetailsViewController.m */,
 				09F74E95172CA02600DE249C /* LoginViewController.h */,
 				09F74E96172CA02600DE249C /* LoginViewController.m */,
+				A379B50F172CD73B007CB106 /* IntentsViewController.h */,
+				A379B510172CD73B007CB106 /* IntentsViewController.mm */,
 			);
 			path = Disrupt13;
 			sourceTree = "<group>";
@@ -413,7 +440,7 @@
 				09F74E94172C89E600DE249C /* Cuprum-Regular.ttf in Resources */,
 				09F74E9A172CA4C900DE249C /* FacebookSDKResources.bundle in Resources */,
 				09F74E9B172CA4C900DE249C /* FBUserSettingsViewResources.bundle in Resources */,
-				09006B64172CC8FF00868B29 /* GlympseResourcesLite.bundle in Resources */,
+				A379B518172CE1AE007CB106 /* GlympseResourcesLite.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,7 +452,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3B91DAF172C3C8C004ECC6D /* main.m in Sources */,
-				A3B91DB3172C3C8C004ECC6D /* AppDelegate.m in Sources */,
+				A3B91DB3172C3C8C004ECC6D /* AppDelegate.mm in Sources */,
 				A3B91DD5172C50EF004ECC6D /* AFHTTPClient.m in Sources */,
 				A3B91DD6172C50EF004ECC6D /* AFHTTPRequestOperation.m in Sources */,
 				A3B91DD7172C50EF004ECC6D /* AFImageRequestOperation.m in Sources */,
@@ -444,6 +471,7 @@
 				09F74E8F172C809C00DE249C /* ListingDetailsViewController.m in Sources */,
 				09F74E97172CA02600DE249C /* LoginViewController.m in Sources */,
 				A379B506172CC2E5007CB106 /* UIImage+Extras.m in Sources */,
+				A379B511172CD73B007CB106 /* IntentsViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,7 +494,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LIBRARY = "libstdc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -488,6 +516,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -498,7 +527,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LIBRARY = "libstdc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -513,6 +542,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
