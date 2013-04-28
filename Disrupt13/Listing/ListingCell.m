@@ -26,4 +26,9 @@
     // Configure the view for the selected state
 }
 
+- (void)prepareForReuse {
+  _imageVIew.image = nil;
+  _label.text = nil;
+}
+
 @end

@@ -1,6 +1,6 @@
 #import "R3APIClient.h"
 
-static NSString * const kAPIBaseURLString = @"http://10.11.6.154:3000/";
+static NSString * const kAPIBaseURLString = @"http://reuse-io.herokuapp.com/";
 
 @implementation R3APIClient
 

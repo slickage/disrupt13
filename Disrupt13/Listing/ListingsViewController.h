@@ -6,6 +6,7 @@
 #import "CameraViewController.h"
 #import "R3APIClient.h"
 #import "MapAnnotation.h"
+#import "ListingCell.h"
 
 @interface ListingsViewController : UIViewController<MKMapViewDelegate, UIGestureRecognizerDelegate, UITableViewDataSource, UITableViewDataSource, CLLocationManagerDelegate>
 

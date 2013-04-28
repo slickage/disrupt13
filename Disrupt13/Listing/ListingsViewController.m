@@ -27,11 +27,23 @@
 }
 - (void)viewDidLoad {
   [super viewDidLoad];
+  
+  UINib *thisNib = [UINib nibWithNibName:@"ListingCell" bundle:nil];
+  [_listingsTableView registerNib:thisNib forCellReuseIdentifier:@"ListingCell"];
+  
+  [_listingsTableView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"ps_neutral"]]];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
 //  [self performSegueWithIdentifier:@"ShowLogin" sender:self];
-  [self startCL];
+  if (!_userLoc) {
+    [self startCL];
+  }
+  
+	NSIndexPath *selection = [_listingsTableView indexPathForSelectedRow];
+	if (selection) {
+		[_listingsTableView deselectRowAtIndexPath:selection animated:YES];
+  }
 }
 
 - (void)didReceiveMemoryWarning
@@ -145,13 +157,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   static NSString *cellIdentifier = @"ListingCell";
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-  if (cell == nil) cell = [[UITableViewCell alloc] init];
+  ListingCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+  if (cell == nil) cell = [[ListingCell alloc] init];
   NSString *label = @"";
   if ([_items count] > 0) {
     NSDictionary *item = [_items objectAtIndex:indexPath.row];
     label = [item objectForKey:@"description"];
-    [cell.textLabel setText:label];
+    [cell.label setText:label];
 //    NSLog(@"%d row : %@", indexPath.row, label);
   }
   return cell;
@@ -160,7 +172,7 @@
 #pragma mark -
 #pragma mark UITableViewDelegate methods
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  //  [tableView deselectRowAtIndexPath:indexPath animated:YES];
+  [self performSegueWithIdentifier:@"PushDetailsView" sender:self];
 }
 
 #pragma mark -
