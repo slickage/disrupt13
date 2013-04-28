@@ -31,26 +31,15 @@
   Glympse::GString apiKey =
   Glympse::CoreFactory::createString("6TB2HKaPgn4oBuG5");
   _glympse =
-  Glympse::LiteFactory::createGlympse(apiKey, serverAddress);
+  Glympse::LiteFactory::createGlympse(serverAddress, apiKey);
   [GLYGlympseLite subscribe:self onPlatform:_glympse];
   _glympse->start();
 	// Do any additional setup after loading the view.
   
-  
+   _glympse->setActive(true);
   
   // Create ticket object.
-  Glympse::GTicketLite ticketLite = Glympse::LiteFactory::createTicket(
-                                                                       3600000, Glympse::CoreFactory::createString("Hello, world!"), NULL);
-  // Add invites. You can add as many invites as you need.
-  ticketLite->addInvite(Glympse::LC::INVITE_TYPE_EMAIL,
-                        Glympse::CoreFactory::createString("reusetestuuid"),
-                        Glympse::CoreFactory::createString("reusetestuuid@glympsegroups.com"));
-  // Send the ticket.
-  _glympse->sendTicket(ticketLite, Glympse::LC::SEND_WIZARD_DESTINATION_READONLY |
-                       Glympse::LC::SEND_WIZARD_INVITES_READONLY |
-                       Glympse::LC::SEND_WIZARD_MESSAGE_READONLY |
-                       Glympse::LC::SEND_WIZARD_PROFILE_READONLY |
-                       Glympse::LC::SEND_WIZARD_TIME_READONLY);
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,7 +53,16 @@
               param1:(const Glympse::GCommon&)param1
               param2:(const Glympse::GCommon&)param2
 {
-  // See Glympse::LC::EVENT_* for the list of all supported events.
+  if (0 != (code & Glympse::LC::EVENT_SYNCED))
+  {
+    int i = 10;
+    ++i;
+  }
+  else if (0 != (code & Glympse::LC::EVENT_TICKET_CREATED))
+  {
+    int i = 10;
+    ++i;
+  }
 }
 - (void)subscribe
 {
@@ -73,5 +71,19 @@
 - (void)unsubscribe
 {
   [GLYGlympseLite unsubscribe:self onPlatform:_glympse];
+}
+- (IBAction)issueGlimpseTicket:(id)sender {
+  Glympse::GTicketLite ticketLite = Glympse::LiteFactory::createTicket(
+                                                                       3600000, Glympse::CoreFactory::createString("Hello, world!"), NULL);
+  // Add invites. You can add as many invites as you need.
+  ticketLite->addInvite(Glympse::LC::INVITE_TYPE_EMAIL,
+                        Glympse::CoreFactory::createString("reusetestuuid"),
+                        Glympse::CoreFactory::createString("reusetestuuid@glympsegroups.com"));
+  // Send the ticket.
+  _glympse->sendTicket(ticketLite, Glympse::LC::SEND_WIZARD_DESTINATION_READONLY |
+                       Glympse::LC::SEND_WIZARD_INVITES_READONLY |
+                       Glympse::LC::SEND_WIZARD_MESSAGE_READONLY |
+                       Glympse::LC::SEND_WIZARD_PROFILE_READONLY |
+                       Glympse::LC::SEND_WIZARD_TIME_READONLY);
 }
 @end

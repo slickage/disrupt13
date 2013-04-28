@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09006B63172CC8FF00868B29 /* GlympseKitLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09006B60172CC8FF00868B29 /* GlympseKitLite.framework */; };
 		0971E9A8172C5B5B000F1672 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0971E9A7172C5B5B000F1672 /* MapKit.framework */; };
 		0971E9AB172C6107000F1672 /* ListingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0971E9AA172C6107000F1672 /* ListingsViewController.m */; };
 		0971E9AD172C6F3E000F1672 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0971E9AC172C6F3D000F1672 /* CoreLocation.framework */; };
@@ -40,8 +39,8 @@
 		A379B50C172CD245007CB106 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A379B50B172CD245007CB106 /* EventKit.framework */; };
 		A379B50E172CD25A007CB106 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A379B50D172CD25A007CB106 /* MessageUI.framework */; };
 		A379B511172CD73B007CB106 /* IntentsViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = A379B510172CD73B007CB106 /* IntentsViewController.mm */; };
-		A379B515172CD98F007CB106 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A379B514172CD98F007CB106 /* libstdc++.dylib */; };
-		A379B518172CE1AE007CB106 /* GlympseResourcesLite.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A379B517172CE1AE007CB106 /* GlympseResourcesLite.bundle */; };
+		A379B51D172CF893007CB106 /* GlympseKitLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A379B51A172CF893007CB106 /* GlympseKitLite.framework */; };
+		A379B51E172CF893007CB106 /* GlympseResourcesLite.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A379B51C172CF893007CB106 /* GlympseResourcesLite.bundle */; };
 		A3B91DA3172C3C8C004ECC6D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B91DA2172C3C8C004ECC6D /* UIKit.framework */; };
 		A3B91DA5172C3C8C004ECC6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B91DA4172C3C8C004ECC6D /* Foundation.framework */; };
 		A3B91DA7172C3C8C004ECC6D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B91DA6172C3C8C004ECC6D /* CoreGraphics.framework */; };
@@ -65,7 +64,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		09006B60172CC8FF00868B29 /* GlympseKitLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GlympseKitLite.framework; sourceTree = "<group>"; };
 		0971E9A7172C5B5B000F1672 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0971E9A9172C6107000F1672 /* ListingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListingsViewController.h; path = Listing/ListingsViewController.h; sourceTree = "<group>"; };
 		0971E9AA172C6107000F1672 /* ListingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListingsViewController.m; path = Listing/ListingsViewController.m; sourceTree = "<group>"; };
@@ -109,9 +107,8 @@
 		A379B50D172CD25A007CB106 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		A379B50F172CD73B007CB106 /* IntentsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntentsViewController.h; sourceTree = "<group>"; };
 		A379B510172CD73B007CB106 /* IntentsViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IntentsViewController.mm; sourceTree = "<group>"; };
-		A379B512172CD96B007CB106 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
-		A379B514172CD98F007CB106 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
-		A379B517172CE1AE007CB106 /* GlympseResourcesLite.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GlympseResourcesLite.bundle; sourceTree = "<group>"; };
+		A379B51A172CF893007CB106 /* GlympseKitLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GlympseKitLite.framework; sourceTree = "<group>"; };
+		A379B51C172CF893007CB106 /* GlympseResourcesLite.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GlympseResourcesLite.bundle; sourceTree = "<group>"; };
 		A3B91D9F172C3C8C004ECC6D /* Disrupt13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Disrupt13.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B91DA2172C3C8C004ECC6D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A3B91DA4172C3C8C004ECC6D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -154,7 +151,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A379B515172CD98F007CB106 /* libstdc++.dylib in Frameworks */,
 				A379B50E172CD25A007CB106 /* MessageUI.framework in Frameworks */,
 				A379B50C172CD245007CB106 /* EventKit.framework in Frameworks */,
 				A379B50A172CD22C007CB106 /* AddressBook.framework in Frameworks */,
@@ -176,31 +172,13 @@
 				A3B91DA5172C3C8C004ECC6D /* Foundation.framework in Frameworks */,
 				A3B91DA7172C3C8C004ECC6D /* CoreGraphics.framework in Frameworks */,
 				09F74EA9172CB79200DE249C /* FacebookSDK.framework in Frameworks */,
-				09006B63172CC8FF00868B29 /* GlympseKitLite.framework in Frameworks */,
+				A379B51D172CF893007CB106 /* GlympseKitLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		09006B5F172CC8FF00868B29 /* GlympseKitLite.embeddedframework */ = {
-			isa = PBXGroup;
-			children = (
-				09006B60172CC8FF00868B29 /* GlympseKitLite.framework */,
-				09006B61172CC8FF00868B29 /* Resources */,
-			);
-			name = GlympseKitLite.embeddedframework;
-			path = vendor/GlympseKitLite.embeddedframework;
-			sourceTree = "<group>";
-		};
-		09006B61172CC8FF00868B29 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				A379B517172CE1AE007CB106 /* GlympseResourcesLite.bundle */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		0971E9AE172C7299000F1672 /* JPSThumbnailAnnotation */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,11 +212,27 @@
 			path = Disrupt13/Helper;
 			sourceTree = "<group>";
 		};
+		A379B519172CF893007CB106 /* GlympseKitLite.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				A379B51A172CF893007CB106 /* GlympseKitLite.framework */,
+				A379B51B172CF893007CB106 /* Resources */,
+			);
+			name = GlympseKitLite.embeddedframework;
+			path = vendor/GlympseKitLite.embeddedframework;
+			sourceTree = "<group>";
+		};
+		A379B51B172CF893007CB106 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A379B51C172CF893007CB106 /* GlympseResourcesLite.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		A3B91D96172C3C8C004ECC6D = {
 			isa = PBXGroup;
 			children = (
-				A379B514172CD98F007CB106 /* libstdc++.dylib */,
-				A379B512172CD96B007CB106 /* libc++.dylib */,
 				A379B50D172CD25A007CB106 /* MessageUI.framework */,
 				A379B50B172CD245007CB106 /* EventKit.framework */,
 				A379B509172CD22C007CB106 /* AddressBook.framework */,
@@ -336,7 +330,7 @@
 		A3B91DC0172C4FE5004ECC6D /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				09006B5F172CC8FF00868B29 /* GlympseKitLite.embeddedframework */,
+				A379B519172CF893007CB106 /* GlympseKitLite.embeddedframework */,
 				A3B91DC1172C50EF004ECC6D /* AFNetworking */,
 				0971E9AE172C7299000F1672 /* JPSThumbnailAnnotation */,
 			);
@@ -440,7 +434,7 @@
 				09F74E94172C89E600DE249C /* Cuprum-Regular.ttf in Resources */,
 				09F74E9A172CA4C900DE249C /* FacebookSDKResources.bundle in Resources */,
 				09F74E9B172CA4C900DE249C /* FBUserSettingsViewResources.bundle in Resources */,
-				A379B518172CE1AE007CB106 /* GlympseResourcesLite.bundle in Resources */,
+				A379B51E172CF893007CB106 /* GlympseResourcesLite.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,8 +487,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -503,7 +497,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -526,8 +520,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -536,7 +530,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;

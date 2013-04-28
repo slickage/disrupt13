@@ -4,5 +4,6 @@
 @interface IntentsViewController : UIViewController<GLYListenerLite> {
   Glympse::GGlympseLite _glympse;
 }
+- (IBAction)issueGlimpseTicket:(id)sender;
 
 @end
