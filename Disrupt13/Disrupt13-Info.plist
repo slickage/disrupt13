@@ -23,8 +23,11 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.slickage.Disrupt13</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
+				<string>rio</string>
 				<string>fb166994140133377</string>
 			</array>
 		</dict>
@@ -57,9 +60,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-  <key>UIBackgroundModes</key>
-  <array>
-    <string>location</string>
-  </array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
 </dict>
 </plist>
