@@ -63,9 +63,11 @@
                                 @"item[latlon][longitude]" : lon
                                 };
   
+  NSTimeInterval timeInMiliseconds = [[NSDate date] timeIntervalSince1970];
+  NSLog(@"Posting: %@", [NSString stringWithFormat:@"photo-%f.png", timeInMiliseconds]);
   R3APIClient *apiClient = [R3APIClient sharedClient];
   NSMutableURLRequest *request = [apiClient multipartFormRequestWithMethod:@"POST" path:@"/items" parameters:parameters constructingBodyWithBlock: ^(id <AFMultipartFormData>formData) {
-    [formData appendPartWithFileData:imageData name:@"item[photo]" fileName:@"photo.png" mimeType:@"image/png"];
+    [formData appendPartWithFileData:imageData name:@"item[photo]" fileName:[NSString stringWithFormat:@"photo-%f.png", timeInMiliseconds] mimeType:@"image/png"];
   }];
   
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
