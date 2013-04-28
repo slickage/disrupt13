@@ -19,18 +19,14 @@
 
 @implementation ListingsViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+- (id)initWithCoder:(NSCoder *)aDecoder {
+  self = [super initWithCoder:aDecoder];
+  if (self) {
+  }
+  return self;
 }
-
 - (void)viewDidLoad {
   [super viewDidLoad];
-	// Do any additional setup after loading the view.
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -66,6 +62,19 @@
   JPSThumbnailAnnotation *annot = [[JPSThumbnailAnnotation alloc] init];
   annot.coordinate = _userLoc.coordinate;
   [_mapView addAnnotation:annot];
+  
+  // getting items after user loc is set
+  R3APIClient *apiClient = [R3APIClient sharedClient];
+  NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
+                          [NSNumber numberWithDouble:_userLoc.coordinate.latitude], @"latitude",
+                          [NSNumber numberWithDouble:_userLoc.coordinate.longitude], @"longitude", nil];
+  [apiClient getPath:@"/items" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    NSLog(@"%@", responseObject);
+    _items = [responseObject objectForKey:@"items"];
+    [_listingsTableView reloadData];
+  } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    NSLog(@"Error: %@", error);
+  }];
 }
 
 - (void)startCL {
@@ -108,5 +117,41 @@
     dstVC.userLoc = _userLoc;
   }
 }
+
+
+#pragma mark -
+#pragma mark UITableViewDataSource methods
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+  return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+  return [_items count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+  static NSString *cellIdentifier = @"ListingCell";
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+  if (cell == nil) cell = [[UITableViewCell alloc] init];
+  NSString *label = @"";
+  if ([_items count] > 0) {
+    NSDictionary *item = [_items objectAtIndex:indexPath.row];
+    label = [item objectForKey:@"description"];
+    [cell.textLabel setText:label];
+    NSLog(@"%d row : %@", indexPath.row, label);
+  }
+  return cell;
+}
+
+#pragma mark -
+#pragma mark UITableViewDelegate methods
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+  //  [tableView deselectRowAtIndexPath:indexPath animated:YES];
+  
+  if (indexPath.section == 0) {
+    NSDictionary *item = [_items objectAtIndex:indexPath.row];
+  }
+}
+
 
 @end
