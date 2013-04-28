@@ -5,6 +5,7 @@
 #import "JPSThumbnailAnnotation.h"
 #import "CameraViewController.h"
 #import "R3APIClient.h"
+#import "MapAnnotation.h"
 
 @interface ListingsViewController : UIViewController<MKMapViewDelegate, UIGestureRecognizerDelegate, UITableViewDataSource, UITableViewDataSource, CLLocationManagerDelegate>
 
