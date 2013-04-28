@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09006B63172CC8FF00868B29 /* GlympseKitLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09006B60172CC8FF00868B29 /* GlympseKitLite.framework */; };
+		09006B64172CC8FF00868B29 /* GlympseResourcesLite.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 09006B62172CC8FF00868B29 /* GlympseResourcesLite.bundle */; };
 		0971E9A8172C5B5B000F1672 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0971E9A7172C5B5B000F1672 /* MapKit.framework */; };
 		0971E9AB172C6107000F1672 /* ListingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0971E9AA172C6107000F1672 /* ListingsViewController.m */; };
 		0971E9AD172C6F3E000F1672 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0971E9AC172C6F3D000F1672 /* CoreLocation.framework */; };
@@ -57,6 +59,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09006B60172CC8FF00868B29 /* GlympseKitLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GlympseKitLite.framework; sourceTree = "<group>"; };
+		09006B62172CC8FF00868B29 /* GlympseResourcesLite.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GlympseResourcesLite.bundle; sourceTree = "<group>"; };
 		0971E9A7172C5B5B000F1672 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0971E9A9172C6107000F1672 /* ListingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListingsViewController.h; path = Listing/ListingsViewController.h; sourceTree = "<group>"; };
 		0971E9AA172C6107000F1672 /* ListingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListingsViewController.m; path = Listing/ListingsViewController.m; sourceTree = "<group>"; };
@@ -153,12 +157,31 @@
 				A3B91DA5172C3C8C004ECC6D /* Foundation.framework in Frameworks */,
 				A3B91DA7172C3C8C004ECC6D /* CoreGraphics.framework in Frameworks */,
 				09F74EA9172CB79200DE249C /* FacebookSDK.framework in Frameworks */,
+				09006B63172CC8FF00868B29 /* GlympseKitLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09006B5F172CC8FF00868B29 /* GlympseKitLite.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				09006B60172CC8FF00868B29 /* GlympseKitLite.framework */,
+				09006B61172CC8FF00868B29 /* Resources */,
+			);
+			name = GlympseKitLite.embeddedframework;
+			path = vendor/GlympseKitLite.embeddedframework;
+			sourceTree = "<group>";
+		};
+		09006B61172CC8FF00868B29 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				09006B62172CC8FF00868B29 /* GlympseResourcesLite.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		0971E9AE172C7299000F1672 /* JPSThumbnailAnnotation */ = {
 			isa = PBXGroup;
 			children = (
@@ -286,6 +309,7 @@
 		A3B91DC0172C4FE5004ECC6D /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				09006B5F172CC8FF00868B29 /* GlympseKitLite.embeddedframework */,
 				A3B91DC1172C50EF004ECC6D /* AFNetworking */,
 				0971E9AE172C7299000F1672 /* JPSThumbnailAnnotation */,
 			);
@@ -389,6 +413,7 @@
 				09F74E94172C89E600DE249C /* Cuprum-Regular.ttf in Resources */,
 				09F74E9A172CA4C900DE249C /* FacebookSDKResources.bundle in Resources */,
 				09F74E9B172CA4C900DE249C /* FBUserSettingsViewResources.bundle in Resources */,
+				09006B64172CC8FF00868B29 /* GlympseResourcesLite.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +526,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../Documents/FacebookSDK\"",
 					"\"$(SRCROOT)/vendor\"",
+					"\"$(SRCROOT)/vendor/GlympseKitLite.embeddedframework\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Disrupt13/Disrupt13-Prefix.pch";
@@ -518,6 +544,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../Documents/FacebookSDK\"",
 					"\"$(SRCROOT)/vendor\"",
+					"\"$(SRCROOT)/vendor/GlympseKitLite.embeddedframework\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Disrupt13/Disrupt13-Prefix.pch";
