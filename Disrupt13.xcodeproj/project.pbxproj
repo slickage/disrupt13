@@ -22,6 +22,7 @@
 		0933CA8D172D0D3B008EA02A /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 0933CA8C172D0D3B008EA02A /* camera.png */; };
 		0933CA90172D0F6A008EA02A /* snap_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0933CA8E172D0F6A008EA02A /* snap_photo.png */; };
 		0933CA91172D0F6A008EA02A /* snap_photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0933CA8F172D0F6A008EA02A /* snap_photo@2x.png */; };
+		0933CA93172D1367008EA02A /* Tim-Cook.png in Resources */ = {isa = PBXBuildFile; fileRef = 0933CA92172D1367008EA02A /* Tim-Cook.png */; };
 		0971E9A8172C5B5B000F1672 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0971E9A7172C5B5B000F1672 /* MapKit.framework */; };
 		0971E9AB172C6107000F1672 /* ListingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0971E9AA172C6107000F1672 /* ListingsViewController.m */; };
 		0971E9AD172C6F3E000F1672 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0971E9AC172C6F3D000F1672 /* CoreLocation.framework */; };
@@ -98,6 +99,7 @@
 		0933CA8C172D0D3B008EA02A /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		0933CA8E172D0F6A008EA02A /* snap_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snap_photo.png; sourceTree = "<group>"; };
 		0933CA8F172D0F6A008EA02A /* snap_photo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "snap_photo@2x.png"; sourceTree = "<group>"; };
+		0933CA92172D1367008EA02A /* Tim-Cook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tim-Cook.png"; sourceTree = "<group>"; };
 		0971E9A7172C5B5B000F1672 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		0971E9A9172C6107000F1672 /* ListingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListingsViewController.h; path = Listing/ListingsViewController.h; sourceTree = "<group>"; };
 		0971E9AA172C6107000F1672 /* ListingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListingsViewController.m; path = Listing/ListingsViewController.m; sourceTree = "<group>"; };
@@ -409,6 +411,7 @@
 		A3B91DE1172C708C004ECC6D /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				0933CA92172D1367008EA02A /* Tim-Cook.png */,
 				0933CA8E172D0F6A008EA02A /* snap_photo.png */,
 				0933CA8F172D0F6A008EA02A /* snap_photo@2x.png */,
 				A379B525172D075B007CB106 /* nav_logo.png */,
@@ -502,6 +505,7 @@
 				0933CA8D172D0D3B008EA02A /* camera.png in Resources */,
 				0933CA90172D0F6A008EA02A /* snap_photo.png in Resources */,
 				0933CA91172D0F6A008EA02A /* snap_photo@2x.png in Resources */,
+				0933CA93172D1367008EA02A /* Tim-Cook.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
