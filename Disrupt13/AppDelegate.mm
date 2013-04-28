@@ -11,6 +11,16 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  UIImage *navBackgroundImage = [UIImage imageNamed:@"navbar"];
+  [[UINavigationBar appearance] setBackgroundImage:navBackgroundImage forBarMetrics:UIBarMetricsDefault];
+  
+  // Change the appearance of back button
+  UIImage *backButtonImage = [[UIImage imageNamed:@"back_btn_bg"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 13, 0, 6)];
+  [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backButtonImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+  
+  // Change the appearance of other navigation button
+  UIImage *barButtonImage = [[UIImage imageNamed:@"btn_bg"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 6, 0, 6)];
+  [[UIBarButtonItem appearance] setBackgroundImage:barButtonImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
   return YES;
 }
 
