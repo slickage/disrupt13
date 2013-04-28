@@ -9,6 +9,7 @@
 #import "ListingCell.h"
 #import "IntentsViewController.h"
 #import "ListingDetailsViewController.h"
+#import "LabelHelper.h"
 
 @interface ListingsViewController : UIViewController<MKMapViewDelegate, UIGestureRecognizerDelegate, UITableViewDataSource, UITableViewDataSource, CLLocationManagerDelegate>
 

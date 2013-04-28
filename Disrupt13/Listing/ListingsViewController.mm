@@ -13,6 +13,9 @@
   
   CLLocationManager *_locManager;
   CLLocation *_userLoc;
+  
+  UIRefreshControl *_refreshControl;
+  MapAnnotation *_userAnnotation;
 }
 
 @end
@@ -32,12 +35,19 @@
   [_listingsTableView registerNib:thisNib forCellReuseIdentifier:@"ListingCell"];
   
   [_listingsTableView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"ps_neutral"]]];
+  
+  _refreshControl = [[UIRefreshControl alloc] init];
+  [_refreshControl addTarget:self action:@selector(refresh) forControlEvents:UIControlEventValueChanged];
+  [_listingsTableView addSubview:_refreshControl];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
 //  [self performSegueWithIdentifier:@"ShowLogin" sender:self];
   if (!_userLoc) {
     [self startCL];
+  }
+  else {
+    [self refresh];
   }
   
 	NSIndexPath *selection = [_listingsTableView indexPathForSelectedRow];
@@ -74,23 +84,18 @@
   MapAnnotation *annot = [[MapAnnotation alloc] initWithCoordinate:_userLoc.coordinate];
   annot.title = @"You";
   [_mapView addAnnotation:annot];
+  _userAnnotation = annot;
   
-  // getting items after user loc is set
-  R3APIClient *apiClient = [R3APIClient sharedClient];
-  NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
-                          [NSNumber numberWithDouble:_userLoc.coordinate.latitude], @"latitude",
-                          [NSNumber numberWithDouble:_userLoc.coordinate.longitude], @"longitude", nil];
-  [apiClient getPath:@"/items" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-    NSLog(@"%@", responseObject);
-    _items = [responseObject objectForKey:@"items"];
-    [self addItemsToMap];
-    [_listingsTableView reloadData];
-  } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-    NSLog(@"Error: %@", error);
-  }];
+  [self refresh];
 }
 
 - (void)addItemsToMap {
+  // remove annotations from map, except for the user location
+  NSMutableArray *annotations = [_mapView.annotations mutableCopy];
+  [annotations removeObject:_userAnnotation];
+  [_mapView removeAnnotations:annotations];
+
+  // add annotations to map
   for (int i = 0; i < [_items count]; i++) {
     NSDictionary *listing = [_items objectAtIndex:i];
     
@@ -134,6 +139,24 @@
     _locManager.distanceFilter = 5.0f; // in meters
   }
   [_locManager startUpdatingLocation];
+}
+
+- (void)refresh {
+  // getting items after user loc is set
+  R3APIClient *apiClient = [R3APIClient sharedClient];
+  NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
+                          [NSNumber numberWithDouble:_userLoc.coordinate.latitude], @"latitude",
+                          [NSNumber numberWithDouble:_userLoc.coordinate.longitude], @"longitude", nil];
+  [apiClient getPath:@"/items" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    NSLog(@"%@", responseObject);
+    _items = [responseObject objectForKey:@"items"];
+    [self addItemsToMap];
+    [_listingsTableView reloadData];
+  } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    NSLog(@"Error: %@", error);
+  }];
+  
+  [_refreshControl endRefreshing];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
@@ -205,23 +228,4 @@
     mkaView.rightCalloutAccessoryView = button;
   }
 }
-
-+ (UIView *)createTitleView:(NSString *)titleText {
-  UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 150, 44)];
-  [titleView setBackgroundColor:[UIColor clearColor]];
-  
-  UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 150, 43)];
-  [titleLabel setTextAlignment:NSTextAlignmentCenter];
-  titleLabel.text = [titleText uppercaseString];
-  titleLabel.backgroundColor = [UIColor clearColor];
-  titleLabel.textColor = [UIColor whiteColor];
- 
-  UIFont *font = [UIFont fontWithName:@"Cuprum-Bold" size:22.0];
-  
-  [titleLabel setFont:font];
-  [titleView addSubview:titleLabel];
-  
-  return titleView;
-}
-
 @end
