@@ -12,6 +12,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "CameraHelper.h"
 #import "ListingDetailsViewController.h"
+#import "LabelHelper.h"
 
 @interface CameraViewController : UIViewController
 

@@ -32,8 +32,6 @@
   [_listingsTableView registerNib:thisNib forCellReuseIdentifier:@"ListingCell"];
   
   [_listingsTableView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"ps_neutral"]]];
-  
-  self.navigationItem.titleView = [ListingsViewController createTitleView:@"Reuse.io"];
 }
 
 - (void)viewDidAppear:(BOOL)animated {

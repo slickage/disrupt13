@@ -39,6 +39,9 @@
   JPSThumbnailAnnotation *annot = [[JPSThumbnailAnnotation alloc] init];
   annot.coordinate = _userLoc.coordinate;
   [_mapView addAnnotation:annot];
+  
+  self.navigationItem.titleView = [ListingDetailsViewController createTitleView:@"Recycle"];
+  self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"ps_neutral"]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -75,6 +78,24 @@
     [self dismissViewControllerAnimated:YES completion:nil];
   }];
   [apiClient enqueueHTTPRequestOperation:operation];
+}
+
++ (UIView *)createTitleView:(NSString *)titleText {
+  UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 150, 44)];
+  [titleView setBackgroundColor:[UIColor clearColor]];
+  
+  UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 150, 43)];
+  [titleLabel setTextAlignment:NSTextAlignmentCenter];
+  titleLabel.text = [titleText uppercaseString];
+  titleLabel.backgroundColor = [UIColor clearColor];
+  titleLabel.textColor = [UIColor whiteColor];
+  
+  UIFont *font = [UIFont fontWithName:@"Cuprum-Bold" size:22.0];
+  
+  [titleLabel setFont:font];
+  [titleView addSubview:titleLabel];
+  
+  return titleView;
 }
 
 @end

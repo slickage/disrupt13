@@ -75,6 +75,9 @@
   
   _deviceInput = input;
   _session = session;
+  
+  self.navigationItem.titleView = [LabelHelper createTitleView:@"Recycle"];
+  self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"ps_neutral"]];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
