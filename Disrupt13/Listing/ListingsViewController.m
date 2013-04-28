@@ -34,8 +34,8 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-  [self performSegueWithIdentifier:@"ShowLogin" sender:self];
-//  [self startCL];
+//  [self performSegueWithIdentifier:@"ShowLogin" sender:self];
+  [self startCL];
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,7 +55,6 @@
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *) locations {
-  NSLog(@"%@", [locations lastObject]);
   // got a location, stop getting location updates
   [manager stopUpdatingLocation];
   
