@@ -9,23 +9,26 @@
 #import "IntentsViewController.h"
 
 @interface IntentsViewController ()
-  
+
 @end
 
 @implementation IntentsViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+  self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+  if (self) {
+    // Custom initialization
+  }
+  return self;
 }
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+  [super viewDidLoad];
+  
+  self.navigationItem.titleView = [LabelHelper createTitleView:@"Reuse"];
+  self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"ps_neutral"]];
   Glympse::GString serverAddress =
   Glympse::CoreFactory::createString("sandbox.glympse.com");
   Glympse::GString apiKey =
@@ -36,16 +39,16 @@
   _glympse->start();
 	// Do any additional setup after loading the view.
   
-   _glympse->setActive(true);
+  _glympse->setActive(true);
   
   // Create ticket object.
-
+  
 }
 
 - (void)didReceiveMemoryWarning
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+  [super didReceiveMemoryWarning];
+  // Dispose of any resources that can be recreated.
 }
 
 - (void)glympseEvent:(const Glympse::GGlympseLite&)glympse
@@ -71,6 +74,7 @@
 - (void)unsubscribe
 {
   [GLYGlympseLite unsubscribe:self onPlatform:_glympse];
+  NSLog(@"Unsubscribe");
 }
 - (IBAction)issueGlimpseTicket:(id)sender {
   Glympse::GTicketLite ticketLite = Glympse::LiteFactory::createTicket(
@@ -83,7 +87,6 @@
   _glympse->sendTicket(ticketLite, Glympse::LC::SEND_WIZARD_DESTINATION_READONLY |
                        Glympse::LC::SEND_WIZARD_INVITES_READONLY |
                        Glympse::LC::SEND_WIZARD_MESSAGE_READONLY |
-                       Glympse::LC::SEND_WIZARD_PROFILE_READONLY |
-                       Glympse::LC::SEND_WIZARD_TIME_READONLY);
+                       Glympse::LC::SEND_WIZARD_PROFILE_READONLY);
 }
 @end
