@@ -27,11 +27,23 @@
 }
 - (void)viewDidLoad {
   [super viewDidLoad];
+  
+  UINib *thisNib = [UINib nibWithNibName:@"ListingCell" bundle:nil];
+  [_listingsTableView registerNib:thisNib forCellReuseIdentifier:@"ListingCell"];
+  
+  [_listingsTableView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"ps_neutral"]]];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
 //  [self performSegueWithIdentifier:@"ShowLogin" sender:self];
-  [self startCL];
+  if (!_userLoc) {
+    [self startCL];
+  }
+  
+	NSIndexPath *selection = [_listingsTableView indexPathForSelectedRow];
+	if (selection) {
+		[_listingsTableView deselectRowAtIndexPath:selection animated:YES];
+  }
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,8 +71,8 @@
   MKCoordinateRegion adjustedRegion = [_mapView regionThatFits:MKCoordinateRegionMakeWithDistance(_userLoc.coordinate, 1000, 1000)];
   [_mapView setRegion:adjustedRegion animated:NO];
   
-  JPSThumbnailAnnotation *annot = [[JPSThumbnailAnnotation alloc] init];
-  annot.coordinate = _userLoc.coordinate;
+  MapAnnotation *annot = [[MapAnnotation alloc] initWithCoordinate:_userLoc.coordinate];
+  annot.title = @"You";
   [_mapView addAnnotation:annot];
   
   // getting items after user loc is set
@@ -71,10 +83,24 @@
   [apiClient getPath:@"/items" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
     NSLog(@"%@", responseObject);
     _items = [responseObject objectForKey:@"items"];
+    [self addItemsToMap];
     [_listingsTableView reloadData];
   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
     NSLog(@"Error: %@", error);
   }];
+}
+
+- (void)addItemsToMap {
+  for (int i = 0; i < [_items count]; i++) {
+    NSDictionary *listing = [_items objectAtIndex:i];
+    
+    CLLocationCoordinate2D coord = CLLocationCoordinate2DMake([[listing objectForKey:@"latitude"] doubleValue], [[listing objectForKey:@"longitude"] doubleValue]);
+    
+    MapAnnotation *annotation = [[MapAnnotation alloc] initWithCoordinate:coord];
+    annotation.title = [listing objectForKey:@"description"];;
+    
+    [_mapView addAnnotation:annotation];
+  }
 }
 
 - (void)startCL {
@@ -131,14 +157,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   static NSString *cellIdentifier = @"ListingCell";
-  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-  if (cell == nil) cell = [[UITableViewCell alloc] init];
+  ListingCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+  if (cell == nil) cell = [[ListingCell alloc] init];
   NSString *label = @"";
   if ([_items count] > 0) {
     NSDictionary *item = [_items objectAtIndex:indexPath.row];
     label = [item objectForKey:@"description"];
-    [cell.textLabel setText:label];
-    NSLog(@"%d row : %@", indexPath.row, label);
+    [cell.label setText:label];
+//    NSLog(@"%d row : %@", indexPath.row, label);
   }
   return cell;
 }
@@ -146,10 +172,30 @@
 #pragma mark -
 #pragma mark UITableViewDelegate methods
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  //  [tableView deselectRowAtIndexPath:indexPath animated:YES];
-  
-  if (indexPath.section == 0) {
-    NSDictionary *item = [_items objectAtIndex:indexPath.row];
+  [self performSegueWithIdentifier:@"PushDetailsView" sender:self];
+}
+
+#pragma mark -
+#pragma mark MKMapViewDelegate methods
+
+- (void)mapView:(MKMapView *)mapView didAddAnnotationViews:(NSArray *)views {
+  for (MKPinAnnotationView *mkaView in views) {
+    // Only update custom items
+    if (![mkaView isKindOfClass:[MKAnnotationView class]])
+      continue;
+    
+    id<MKAnnotation> annotation = mkaView.annotation;
+    NSLog(@"%@", [annotation title]);
+    if ([[annotation title] isEqualToString:@"You"]) {
+      mkaView.pinColor = MKPinAnnotationColorRed;
+    }
+    else {
+      mkaView.pinColor = MKPinAnnotationColorPurple;
+    }
+    
+    //Add buttons to each one
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    mkaView.rightCalloutAccessoryView = button;
   }
 }
 
