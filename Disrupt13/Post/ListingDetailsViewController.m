@@ -46,13 +46,17 @@
 }
 
 - (IBAction)recyclePerformed:(id)sender {
-  UIImage *resizedImage = [_imageView.image imageByScalingAndCroppingForSize:CGSizeMake(320,320)];
+  UIImage *resizedImage = [_imageView.image imageByScalingAndCroppingForSize:CGSizeMake(640, 640)];
   NSData *imageData = UIImagePNGRepresentation(resizedImage);
   
+  NSNumber *lat = [NSNumber numberWithDouble:[_userLoc coordinate].latitude];
+  NSNumber *lon = [NSNumber numberWithDouble:[_userLoc coordinate].longitude];
+ 
+  
   NSDictionary *parameters = @{ @"item[heading]" : @"item-heading",
-                                @"item[description]" : @"item-desc",
-                                @"item[latlon][latitude]" : @1,
-                                @"item[latlon][latitude]" : @2,
+                                @"item[description]" : _textView.text,
+                                @"item[latlon][latitude]" : lat,
+                                @"item[latlon][longitude]" : lon
                                 };
   
   R3APIClient *apiClient = [R3APIClient sharedClient];
