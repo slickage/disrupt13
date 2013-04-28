@@ -9,5 +9,5 @@
 
 @property (strong, nonatomic) UIImage *listingImage;
 @property (strong, nonatomic) CLLocation *userLoc;
-
+@property (strong, nonatomic) NSDictionary *selectedItem;
 @end

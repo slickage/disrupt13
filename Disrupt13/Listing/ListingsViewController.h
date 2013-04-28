@@ -8,10 +8,10 @@
 #import "MapAnnotation.h"
 #import "ListingCell.h"
 #import "IntentsViewController.h"
+#import "ListingDetailsViewController.h"
 
 @interface ListingsViewController : UIViewController<MKMapViewDelegate, UIGestureRecognizerDelegate, UITableViewDataSource, UITableViewDataSource, CLLocationManagerDelegate>
 
 @property (strong, nonatomic) NSArray *items;
 @property (weak, nonatomic) IBOutlet UITableView *listingsTableView;
-
 @end

@@ -2,6 +2,7 @@
 #import <GlympseKitLite/GlympseLite.h>
 #import "LabelHelper.h"
 #import "UIImageView+AFNetworking.h"
+#import "R3APIClient.h"
 
 @interface IntentsViewController : UIViewController<GLYListenerLite> {
   Glympse::GGlympseLite _glympse;

@@ -65,7 +65,7 @@
   
   R3APIClient *apiClient = [R3APIClient sharedClient];
   NSMutableURLRequest *request = [apiClient multipartFormRequestWithMethod:@"POST" path:@"/items" parameters:parameters constructingBodyWithBlock: ^(id <AFMultipartFormData>formData) {
-    [formData appendPartWithFileData:imageData name:@"item[photo]" fileName:@"photo.jpg" mimeType:@"image/png"];
+    [formData appendPartWithFileData:imageData name:@"item[photo]" fileName:@"photo.png" mimeType:@"image/png"];
   }];
   
   AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];

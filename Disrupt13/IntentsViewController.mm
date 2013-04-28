@@ -72,6 +72,14 @@
   {
     int i = 10;
     ++i;
+    R3APIClient *apiClient = [R3APIClient sharedClient];
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:@"on my way", @"status", [_itemData objectForKey:@"id"], @"item_id", nil];
+    [apiClient putPath:@"/user_item_status" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+      NSLog(@"Updated user item status");
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+      NSLog(@"Error updating user item status");
+      NSLog(@"%@", error);
+    }];
   }
 }
 - (void)subscribe
