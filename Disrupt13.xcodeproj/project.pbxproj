@@ -24,6 +24,15 @@
 		09F74E8F172C809C00DE249C /* ListingDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F74E8E172C809C00DE249C /* ListingDetailsViewController.m */; };
 		09F74E93172C89E600DE249C /* Cuprum-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09F74E91172C89E600DE249C /* Cuprum-Bold.ttf */; };
 		09F74E94172C89E600DE249C /* Cuprum-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09F74E92172C89E600DE249C /* Cuprum-Regular.ttf */; };
+		09F74E97172CA02600DE249C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F74E96172CA02600DE249C /* LoginViewController.m */; };
+		09F74E9A172CA4C900DE249C /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 09F74E98172CA4C900DE249C /* FacebookSDKResources.bundle */; };
+		09F74E9B172CA4C900DE249C /* FBUserSettingsViewResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 09F74E99172CA4C900DE249C /* FBUserSettingsViewResources.bundle */; };
+		09F74E9D172CA52A00DE249C /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09F74E9C172CA52900DE249C /* Social.framework */; };
+		09F74E9F172CA52F00DE249C /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09F74E9E172CA52F00DE249C /* AdSupport.framework */; };
+		09F74EA1172CA56500DE249C /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09F74EA0172CA56500DE249C /* Accounts.framework */; };
+		09F74EA3172CA58D00DE249C /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 09F74EA2172CA58D00DE249C /* libsqlite3.dylib */; };
+		09F74EA5172CA5DF00DE249C /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09F74EA4172CA5DF00DE249C /* FacebookSDK.framework */; };
+		09F74EA7172CA84D00DE249C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09F74EA6172CA84D00DE249C /* Security.framework */; };
 		A3B91DA3172C3C8C004ECC6D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B91DA2172C3C8C004ECC6D /* UIKit.framework */; };
 		A3B91DA5172C3C8C004ECC6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B91DA4172C3C8C004ECC6D /* Foundation.framework */; };
 		A3B91DA7172C3C8C004ECC6D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B91DA6172C3C8C004ECC6D /* CoreGraphics.framework */; };
@@ -72,6 +81,16 @@
 		09F74E8E172C809C00DE249C /* ListingDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListingDetailsViewController.m; path = Post/ListingDetailsViewController.m; sourceTree = "<group>"; };
 		09F74E91172C89E600DE249C /* Cuprum-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cuprum-Bold.ttf"; sourceTree = "<group>"; };
 		09F74E92172C89E600DE249C /* Cuprum-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cuprum-Regular.ttf"; sourceTree = "<group>"; };
+		09F74E95172CA02600DE249C /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		09F74E96172CA02600DE249C /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		09F74E98172CA4C900DE249C /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKResources.bundle; sourceTree = "<group>"; };
+		09F74E99172CA4C900DE249C /* FBUserSettingsViewResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FBUserSettingsViewResources.bundle; sourceTree = "<group>"; };
+		09F74E9C172CA52900DE249C /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		09F74E9E172CA52F00DE249C /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		09F74EA0172CA56500DE249C /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		09F74EA2172CA58D00DE249C /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		09F74EA4172CA5DF00DE249C /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		09F74EA6172CA84D00DE249C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		A3B91D9F172C3C8C004ECC6D /* Disrupt13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Disrupt13.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B91DA2172C3C8C004ECC6D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A3B91DA4172C3C8C004ECC6D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -114,6 +133,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09F74EA7172CA84D00DE249C /* Security.framework in Frameworks */,
+				09F74EA3172CA58D00DE249C /* libsqlite3.dylib in Frameworks */,
+				09F74EA1172CA56500DE249C /* Accounts.framework in Frameworks */,
+				09F74E9F172CA52F00DE249C /* AdSupport.framework in Frameworks */,
+				09F74E9D172CA52A00DE249C /* Social.framework in Frameworks */,
 				0971E9AD172C6F3E000F1672 /* CoreLocation.framework in Frameworks */,
 				0971E9A8172C5B5B000F1672 /* MapKit.framework in Frameworks */,
 				0984A6C0172C5010007DE898 /* QuartzCore.framework in Frameworks */,
@@ -125,6 +149,7 @@
 				A3B91DA3172C3C8C004ECC6D /* UIKit.framework in Frameworks */,
 				A3B91DA5172C3C8C004ECC6D /* Foundation.framework in Frameworks */,
 				A3B91DA7172C3C8C004ECC6D /* CoreGraphics.framework in Frameworks */,
+				09F74EA5172CA5DF00DE249C /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +182,11 @@
 		A3B91D96172C3C8C004ECC6D = {
 			isa = PBXGroup;
 			children = (
+				09F74EA6172CA84D00DE249C /* Security.framework */,
+				09F74EA2172CA58D00DE249C /* libsqlite3.dylib */,
+				09F74EA0172CA56500DE249C /* Accounts.framework */,
+				09F74E9E172CA52F00DE249C /* AdSupport.framework */,
+				09F74E9C172CA52900DE249C /* Social.framework */,
 				0971E9AC172C6F3D000F1672 /* CoreLocation.framework */,
 				0971E9A7172C5B5B000F1672 /* MapKit.framework */,
 				0984A6BF172C5010007DE898 /* QuartzCore.framework */,
@@ -184,6 +214,9 @@
 		A3B91DA1172C3C8C004ECC6D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				09F74EA4172CA5DF00DE249C /* FacebookSDK.framework */,
+				09F74E98172CA4C900DE249C /* FacebookSDKResources.bundle */,
+				09F74E99172CA4C900DE249C /* FBUserSettingsViewResources.bundle */,
 				A3B91DA2172C3C8C004ECC6D /* UIKit.framework */,
 				A3B91DA4172C3C8C004ECC6D /* Foundation.framework */,
 				A3B91DA6172C3C8C004ECC6D /* CoreGraphics.framework */,
@@ -207,6 +240,8 @@
 				0971E9AA172C6107000F1672 /* ListingsViewController.m */,
 				09F74E8D172C809C00DE249C /* ListingDetailsViewController.h */,
 				09F74E8E172C809C00DE249C /* ListingDetailsViewController.m */,
+				09F74E95172CA02600DE249C /* LoginViewController.h */,
+				09F74E96172CA02600DE249C /* LoginViewController.m */,
 			);
 			path = Disrupt13;
 			sourceTree = "<group>";
@@ -338,6 +373,8 @@
 				A3B91DE7172C7202004ECC6D /* Default-568h@2x.png in Resources */,
 				09F74E93172C89E600DE249C /* Cuprum-Bold.ttf in Resources */,
 				09F74E94172C89E600DE249C /* Cuprum-Regular.ttf in Resources */,
+				09F74E9A172CA4C900DE249C /* FacebookSDKResources.bundle in Resources */,
+				09F74E9B172CA4C900DE249C /* FBUserSettingsViewResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +403,7 @@
 				0971E9B6172C7299000F1672 /* JPSThumbnailAnnotationView.m in Sources */,
 				0971E9B7172C7299000F1672 /* JPSThumnail.m in Sources */,
 				09F74E8F172C809C00DE249C /* ListingDetailsViewController.m in Sources */,
+				09F74E97172CA02600DE249C /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +482,10 @@
 		A3B91DBD172C3C8C004ECC6D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Documents/FacebookSDK\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Disrupt13/Disrupt13-Prefix.pch";
 				INFOPLIST_FILE = "Disrupt13/Disrupt13-Info.plist";
@@ -456,6 +498,10 @@
 		A3B91DBE172C3C8C004ECC6D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Documents/FacebookSDK\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Disrupt13/Disrupt13-Prefix.pch";
 				INFOPLIST_FILE = "Disrupt13/Disrupt13-Info.plist";

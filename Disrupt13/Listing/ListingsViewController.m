@@ -31,7 +31,11 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
 	// Do any additional setup after loading the view.
-  [self startCL];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+  [self performSegueWithIdentifier:@"ShowLogin" sender:self];
+//  [self startCL];
 }
 
 - (void)didReceiveMemoryWarning
