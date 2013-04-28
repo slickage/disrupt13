@@ -86,7 +86,6 @@
     
     MapAnnotation *annotation = [[MapAnnotation alloc] initWithCoordinate:coord];
     annotation.title = [listing objectForKey:@"description"];;
-//    annotation.subtitle = routeNumbers;
     
     [_mapView addAnnotation:annotation];
   }
