@@ -46,6 +46,8 @@
 		A379B511172CD73B007CB106 /* IntentsViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = A379B510172CD73B007CB106 /* IntentsViewController.mm */; };
 		A379B523172CFF34007CB106 /* GlympseKitLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A379B520172CFF34007CB106 /* GlympseKitLite.framework */; };
 		A379B524172CFF34007CB106 /* GlympseResourcesLite.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A379B522172CFF34007CB106 /* GlympseResourcesLite.bundle */; };
+		A379B527172D075B007CB106 /* nav_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = A379B525172D075B007CB106 /* nav_logo.png */; };
+		A379B528172D075B007CB106 /* nav_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A379B526172D075B007CB106 /* nav_logo@2x.png */; };
 		A3B91DA3172C3C8C004ECC6D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B91DA2172C3C8C004ECC6D /* UIKit.framework */; };
 		A3B91DA5172C3C8C004ECC6D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B91DA4172C3C8C004ECC6D /* Foundation.framework */; };
 		A3B91DA7172C3C8C004ECC6D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3B91DA6172C3C8C004ECC6D /* CoreGraphics.framework */; };
@@ -65,7 +67,6 @@
 		A3B91DDC172C50EF004ECC6D /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B91DD2172C50EF004ECC6D /* AFXMLRequestOperation.m */; };
 		A3B91DDD172C50EF004ECC6D /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B91DD4172C50EF004ECC6D /* UIImageView+AFNetworking.m */; };
 		A3B91DE0172C5175004ECC6D /* R3APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A3B91DDF172C5175004ECC6D /* R3APIClient.m */; };
-		A3B91DE7172C7202004ECC6D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3B91DE6172C7202004ECC6D /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -121,6 +122,8 @@
 		A379B510172CD73B007CB106 /* IntentsViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IntentsViewController.mm; sourceTree = "<group>"; };
 		A379B520172CFF34007CB106 /* GlympseKitLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GlympseKitLite.framework; sourceTree = "<group>"; };
 		A379B522172CFF34007CB106 /* GlympseResourcesLite.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GlympseResourcesLite.bundle; sourceTree = "<group>"; };
+		A379B525172D075B007CB106 /* nav_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_logo.png; sourceTree = "<group>"; };
+		A379B526172D075B007CB106 /* nav_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_logo@2x.png"; sourceTree = "<group>"; };
 		A3B91D9F172C3C8C004ECC6D /* Disrupt13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Disrupt13.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B91DA2172C3C8C004ECC6D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A3B91DA4172C3C8C004ECC6D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -155,7 +158,6 @@
 		A3B91DD4172C50EF004ECC6D /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		A3B91DDE172C5175004ECC6D /* R3APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = R3APIClient.h; path = Remote/R3APIClient.h; sourceTree = "<group>"; };
 		A3B91DDF172C5175004ECC6D /* R3APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = R3APIClient.m; path = Remote/R3APIClient.m; sourceTree = "<group>"; };
-		A3B91DE6172C7202004ECC6D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -384,7 +386,8 @@
 		A3B91DE1172C708C004ECC6D /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				A3B91DE6172C7202004ECC6D /* Default-568h@2x.png */,
+				A379B525172D075B007CB106 /* nav_logo.png */,
+				A379B526172D075B007CB106 /* nav_logo@2x.png */,
 				0926AB4B172CFCA000EEC0EC /* ps_neutral_@2X.png */,
 				0926AB4C172CFCA000EEC0EC /* ps_neutral.png */,
 				09F74E90172C89E600DE249C /* Fonts */,
@@ -448,7 +451,6 @@
 				A3B91DB7172C3C8C004ECC6D /* Default@2x.png in Resources */,
 				A3B91DB9172C3C8C004ECC6D /* Default-568h@2x.png in Resources */,
 				0984A6AF172C4D68007DE898 /* Storyboard.storyboard in Resources */,
-				A3B91DE7172C7202004ECC6D /* Default-568h@2x.png in Resources */,
 				09F74E93172C89E600DE249C /* Cuprum-Bold.ttf in Resources */,
 				09F74E94172C89E600DE249C /* Cuprum-Regular.ttf in Resources */,
 				09F74E9A172CA4C900DE249C /* FacebookSDKResources.bundle in Resources */,
@@ -457,6 +459,8 @@
 				0926AB4D172CFCA000EEC0EC /* ps_neutral_@2X.png in Resources */,
 				0926AB4E172CFCA000EEC0EC /* ps_neutral.png in Resources */,
 				A379B524172CFF34007CB106 /* GlympseResourcesLite.bundle in Resources */,
+				A379B527172D075B007CB106 /* nav_logo.png in Resources */,
+				A379B528172D075B007CB106 /* nav_logo@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
